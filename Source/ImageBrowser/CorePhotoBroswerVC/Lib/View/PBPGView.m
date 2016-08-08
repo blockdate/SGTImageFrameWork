@@ -2,13 +2,13 @@
 //  PBPGView.m
 //  CorePhotoBroswerVC
 //
-//  Created by 冯成林 on 15/5/5.
-//  Copyright (c) 2015年 冯成林. All rights reserved.
+//  Created by block on 15/5/5.
+//  Copyright (c) 2015年 block. All rights reserved.
 //
 
 #import "PBPGView.h"
 #import "LFRoundProgressView.h"
-#import "UIColor+Extend.h"
+#import "UIColor+Hex.h"
 
 
 
@@ -63,7 +63,7 @@
  */
 -(void)viewPrepare{
     
-    self.backgroundColor = rgba(0, 0, 0, .5f);
+    self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5f];
     
     [self addSubview:self.progressView];
     

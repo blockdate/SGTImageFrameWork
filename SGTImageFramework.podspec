@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "SGTImageFramework"
   s.version      = "0.0.1"
-  s.summary      = "A short description of SGTImageFramework. This is a private pod sp. provide image picker and viewer function"
+  s.summary      = "This is a private pod sp. provide image picker and viewer function"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-  ImagePicker ImageViewer
+                  ImagePicker ImageViewer .This is a private pod sp. provide image picker and viewer function
                    DESC
 
   s.homepage     = "https://github.com/blockdate/SGTImageFrameWork"
@@ -64,7 +64,7 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  s.platform     = :ios
+  # s.platform     = :ios
   s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/blockdate/SGTImageFrameWork.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/blockdate/SGTImageFrameWork.git", :tag => s.version.to_s }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -135,5 +135,6 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   s.dependency 'Masonry', '~> 0.6.3'
   s.dependency 'SDWebImage', '~> 3.7.3'
+  s.dependency 'ReactiveCocoa', '~> 2.5'
 
 end

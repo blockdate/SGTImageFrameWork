@@ -2,7 +2,7 @@
 //  UIImageView+SD.m
 //  CoreSDWebImage
 //
-//  Created by 成林 on 15/5/6.
+//  Created by block on 15/5/6.
 //  Copyright (c) 2015年 muxi. All rights reserved.
 //
 

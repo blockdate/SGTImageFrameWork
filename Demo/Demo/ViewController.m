@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "SGTImagePickerController.h"
 @interface ViewController ()
 
 @end
@@ -17,6 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    SGTImagePickerController *c = [[SGTImagePickerController alloc] initWithMaxCount:9];
+    [self presentViewController:c animated:true completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

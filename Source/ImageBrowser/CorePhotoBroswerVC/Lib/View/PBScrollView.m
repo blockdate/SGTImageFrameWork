@@ -2,8 +2,8 @@
 //  PBScrollView.m
 //  CorePhotoBroswerVC
 //
-//  Created by 冯成林 on 15/5/8.
-//  Copyright (c) 2015年 冯成林. All rights reserved.
+//  Created by block on 15/5/8.
+//  Copyright (c) 2015年 block. All rights reserved.
 //
 
 #import "PBScrollView.h"

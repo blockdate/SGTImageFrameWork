@@ -2,8 +2,8 @@
 //  PBModel.h
 //  CorePhotoBroswerVC
 //
-//  Created by 成林 on 15/5/4.
-//  Copyright (c) 2015年 冯成林. All rights reserved.
+//  Created by block on 15/5/4.
+//  Copyright (c) 2015年 block. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

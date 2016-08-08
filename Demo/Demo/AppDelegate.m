@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SGTImagePickerController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+//    let imagePicker = DNImagePickerController(maxCount: 9)
+//    imagePicker.imagePickerDelegate = self
+//    self.viewModel!.service.topViewController!.navigationController?.presentViewController(imagePicker, animated: true, completion: { () -> Void in
+//        
+//    })
+    
+    
     return YES;
 }
 

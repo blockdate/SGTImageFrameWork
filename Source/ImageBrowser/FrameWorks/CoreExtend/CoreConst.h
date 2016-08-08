@@ -1,5 +1,5 @@
 //全局通用常量定义,结尾请不要使用；号
-#import "UIColor+Extend.h"
+//#import "UIColor+Hex.h"
 
 //ios系统版本
 #define ios8x [[[UIDevice currentDevice] systemVersion] floatValue] >=8.0f
