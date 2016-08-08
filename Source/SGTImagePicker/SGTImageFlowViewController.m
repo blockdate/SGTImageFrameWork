@@ -16,7 +16,7 @@
 #import "SGTSendButton.h"
 #import "SGTImageAsset.h"
 #import "NSURL+DNIMagePickerUrlEqual.h"
-
+#import <AssetsLibrary/AssetsLibrary.h>
 
 //static NSUInteger kDNImageFlowMaxSeletedNumber = 9;
 

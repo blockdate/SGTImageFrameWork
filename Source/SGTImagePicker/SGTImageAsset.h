@@ -6,10 +6,8 @@
 //  Copyright (c) 2015年 block. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <CoreGraphics/CoreGraphics.h>
 #import <UIKit/UIKit.h>
-#import <AssetsLibrary/AssetsLibrary.h>
+@class ALAsset, ALAssetsLibrary;
 
 @interface SGTImageAsset : NSObject
 

@@ -59,33 +59,6 @@
 		E199A1281D5880AD0097B960 /* UIViewController+DNImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E199A05B1D5880AD0097B960 /* UIViewController+DNImagePicker.m */; };
 		E199A1291D5880AD0097B960 /* UIWindow+Launch.h in Headers */ = {isa = PBXBuildFile; fileRef = E199A05D1D5880AD0097B960 /* UIWindow+Launch.h */; };
 		E199A12A1D5880AE0097B960 /* UIWindow+Launch.m in Sources */ = {isa = PBXBuildFile; fileRef = E199A05E1D5880AD0097B960 /* UIWindow+Launch.m */; };
-		E199A12B1D5880AE0097B960 /* CTAssetsGroupViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = E199A0611D5880AD0097B960 /* CTAssetsGroupViewCell.h */; };
-		E199A12C1D5880AE0097B960 /* CTAssetsGroupViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E199A0621D5880AD0097B960 /* CTAssetsGroupViewCell.m */; };
-		E199A12D1D5880AE0097B960 /* CTAssetsSupplementaryView.h in Headers */ = {isa = PBXBuildFile; fileRef = E199A0631D5880AD0097B960 /* CTAssetsSupplementaryView.h */; };
-		E199A12E1D5880AE0097B960 /* CTAssetsSupplementaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = E199A0641D5880AD0097B960 /* CTAssetsSupplementaryView.m */; };
-		E199A12F1D5880AE0097B960 /* CTAssetsViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = E199A0651D5880AD0097B960 /* CTAssetsViewCell.h */; };
-		E199A1301D5880AE0097B960 /* CTAssetsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E199A0661D5880AD0097B960 /* CTAssetsViewCell.m */; };
-		E199A1311D5880AE0097B960 /* CTImagePickBottomView.h in Headers */ = {isa = PBXBuildFile; fileRef = E199A0671D5880AD0097B960 /* CTImagePickBottomView.h */; };
-		E199A1321D5880AE0097B960 /* CTImagePickBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = E199A0681D5880AD0097B960 /* CTImagePickBottomView.m */; };
-		E199A1331D5880AE0097B960 /* PickPhotoFromCameraCell.h in Headers */ = {isa = PBXBuildFile; fileRef = E199A0691D5880AD0097B960 /* PickPhotoFromCameraCell.h */; };
-		E199A1341D5880AE0097B960 /* PickPhotoFromCameraCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E199A06A1D5880AD0097B960 /* PickPhotoFromCameraCell.m */; };
-		E199A1351D5880AE0097B960 /* CTAssetHead.h in Headers */ = {isa = PBXBuildFile; fileRef = E199A06B1D5880AD0097B960 /* CTAssetHead.h */; };
-		E199A1361D5880AE0097B960 /* CTAssetsPickerChecked.png in Resources */ = {isa = PBXBuildFile; fileRef = E199A06D1D5880AD0097B960 /* CTAssetsPickerChecked.png */; };
-		E199A1371D5880AE0097B960 /* CTAssetsPickerChecked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E199A06E1D5880AD0097B960 /* CTAssetsPickerChecked@2x.png */; };
-		E199A1381D5880AE0097B960 /* CTAssetsPickerChecked~iOS6.png in Resources */ = {isa = PBXBuildFile; fileRef = E199A06F1D5880AD0097B960 /* CTAssetsPickerChecked~iOS6.png */; };
-		E199A1391D5880AE0097B960 /* CTAssetsPickerChecked~iOS6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E199A0701D5880AD0097B960 /* CTAssetsPickerChecked~iOS6@2x.png */; };
-		E199A13A1D5880AE0097B960 /* CTAssetsPickerLocked.png in Resources */ = {isa = PBXBuildFile; fileRef = E199A0711D5880AD0097B960 /* CTAssetsPickerLocked.png */; };
-		E199A13B1D5880AE0097B960 /* CTAssetsPickerLocked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E199A0721D5880AD0097B960 /* CTAssetsPickerLocked@2x.png */; };
-		E199A13C1D5880AE0097B960 /* CTAssetsPickerVideo.png in Resources */ = {isa = PBXBuildFile; fileRef = E199A0731D5880AD0097B960 /* CTAssetsPickerVideo.png */; };
-		E199A13D1D5880AE0097B960 /* CTAssetsPickerVideo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E199A0741D5880AD0097B960 /* CTAssetsPickerVideo@2x.png */; };
-		E199A13E1D5880AE0097B960 /* NSDate+TimeInterval.h in Headers */ = {isa = PBXBuildFile; fileRef = E199A0751D5880AD0097B960 /* NSDate+TimeInterval.h */; };
-		E199A13F1D5880AE0097B960 /* NSDate+TimeInterval.m in Sources */ = {isa = PBXBuildFile; fileRef = E199A0761D5880AD0097B960 /* NSDate+TimeInterval.m */; };
-		E199A1401D5880AE0097B960 /* CTAssetsGroupViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E199A0781D5880AD0097B960 /* CTAssetsGroupViewController.h */; };
-		E199A1411D5880AE0097B960 /* CTAssetsGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E199A0791D5880AD0097B960 /* CTAssetsGroupViewController.m */; };
-		E199A1421D5880AE0097B960 /* CTAssetsPickerController.h in Headers */ = {isa = PBXBuildFile; fileRef = E199A07A1D5880AD0097B960 /* CTAssetsPickerController.h */; };
-		E199A1431D5880AE0097B960 /* CTAssetsPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = E199A07B1D5880AD0097B960 /* CTAssetsPickerController.m */; };
-		E199A1441D5880AE0097B960 /* CTAssetsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E199A07C1D5880AD0097B960 /* CTAssetsViewController.h */; };
-		E199A1451D5880AE0097B960 /* CTAssetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E199A07D1D5880AD0097B960 /* CTAssetsViewController.m */; };
 		E199A1461D5880AE0097B960 /* PBConst.h in Headers */ = {isa = PBXBuildFile; fileRef = E199A0821D5880AD0097B960 /* PBConst.h */; };
 		E199A1471D5880AE0097B960 /* PBConst.m in Sources */ = {isa = PBXBuildFile; fileRef = E199A0831D5880AD0097B960 /* PBConst.m */; };
 		E199A1481D5880AE0097B960 /* PhotoBroswerLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = E199A0851D5880AD0097B960 /* PhotoBroswerLayout.h */; };
@@ -258,33 +231,6 @@
 		E199A05B1D5880AD0097B960 /* UIViewController+DNImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DNImagePicker.m"; sourceTree = "<group>"; };
 		E199A05D1D5880AD0097B960 /* UIWindow+Launch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Launch.h"; sourceTree = "<group>"; };
 		E199A05E1D5880AD0097B960 /* UIWindow+Launch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Launch.m"; sourceTree = "<group>"; };
-		E199A0611D5880AD0097B960 /* CTAssetsGroupViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTAssetsGroupViewCell.h; sourceTree = "<group>"; };
-		E199A0621D5880AD0097B960 /* CTAssetsGroupViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTAssetsGroupViewCell.m; sourceTree = "<group>"; };
-		E199A0631D5880AD0097B960 /* CTAssetsSupplementaryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTAssetsSupplementaryView.h; sourceTree = "<group>"; };
-		E199A0641D5880AD0097B960 /* CTAssetsSupplementaryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTAssetsSupplementaryView.m; sourceTree = "<group>"; };
-		E199A0651D5880AD0097B960 /* CTAssetsViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTAssetsViewCell.h; sourceTree = "<group>"; };
-		E199A0661D5880AD0097B960 /* CTAssetsViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTAssetsViewCell.m; sourceTree = "<group>"; };
-		E199A0671D5880AD0097B960 /* CTImagePickBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTImagePickBottomView.h; sourceTree = "<group>"; };
-		E199A0681D5880AD0097B960 /* CTImagePickBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTImagePickBottomView.m; sourceTree = "<group>"; };
-		E199A0691D5880AD0097B960 /* PickPhotoFromCameraCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickPhotoFromCameraCell.h; sourceTree = "<group>"; };
-		E199A06A1D5880AD0097B960 /* PickPhotoFromCameraCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickPhotoFromCameraCell.m; sourceTree = "<group>"; };
-		E199A06B1D5880AD0097B960 /* CTAssetHead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTAssetHead.h; sourceTree = "<group>"; };
-		E199A06D1D5880AD0097B960 /* CTAssetsPickerChecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CTAssetsPickerChecked.png; sourceTree = "<group>"; };
-		E199A06E1D5880AD0097B960 /* CTAssetsPickerChecked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CTAssetsPickerChecked@2x.png"; sourceTree = "<group>"; };
-		E199A06F1D5880AD0097B960 /* CTAssetsPickerChecked~iOS6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CTAssetsPickerChecked~iOS6.png"; sourceTree = "<group>"; };
-		E199A0701D5880AD0097B960 /* CTAssetsPickerChecked~iOS6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CTAssetsPickerChecked~iOS6@2x.png"; sourceTree = "<group>"; };
-		E199A0711D5880AD0097B960 /* CTAssetsPickerLocked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CTAssetsPickerLocked.png; sourceTree = "<group>"; };
-		E199A0721D5880AD0097B960 /* CTAssetsPickerLocked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CTAssetsPickerLocked@2x.png"; sourceTree = "<group>"; };
-		E199A0731D5880AD0097B960 /* CTAssetsPickerVideo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CTAssetsPickerVideo.png; sourceTree = "<group>"; };
-		E199A0741D5880AD0097B960 /* CTAssetsPickerVideo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CTAssetsPickerVideo@2x.png"; sourceTree = "<group>"; };
-		E199A0751D5880AD0097B960 /* NSDate+TimeInterval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TimeInterval.h"; sourceTree = "<group>"; };
-		E199A0761D5880AD0097B960 /* NSDate+TimeInterval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TimeInterval.m"; sourceTree = "<group>"; };
-		E199A0781D5880AD0097B960 /* CTAssetsGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTAssetsGroupViewController.h; sourceTree = "<group>"; };
-		E199A0791D5880AD0097B960 /* CTAssetsGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTAssetsGroupViewController.m; sourceTree = "<group>"; };
-		E199A07A1D5880AD0097B960 /* CTAssetsPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTAssetsPickerController.h; sourceTree = "<group>"; };
-		E199A07B1D5880AD0097B960 /* CTAssetsPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTAssetsPickerController.m; sourceTree = "<group>"; };
-		E199A07C1D5880AD0097B960 /* CTAssetsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTAssetsViewController.h; sourceTree = "<group>"; };
-		E199A07D1D5880AD0097B960 /* CTAssetsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTAssetsViewController.m; sourceTree = "<group>"; };
 		E199A0821D5880AD0097B960 /* PBConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBConst.h; sourceTree = "<group>"; };
 		E199A0831D5880AD0097B960 /* PBConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBConst.m; sourceTree = "<group>"; };
 		E199A0851D5880AD0097B960 /* PhotoBroswerLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoBroswerLayout.h; sourceTree = "<group>"; };
@@ -470,7 +416,6 @@
 			isa = PBXGroup;
 			children = (
 				E199A0201D5880AD0097B960 /* Category */,
-				E199A05F1D5880AD0097B960 /* ImageAssetsPicker */,
 				E199A07E1D5880AD0097B960 /* ImageBrowser */,
 				E199A0B31D5880AD0097B960 /* SDWebImage */,
 				E199A0BB1D5880AD0097B960 /* SGTImageFramework.h */,
@@ -645,64 +590,6 @@
 				E199A05E1D5880AD0097B960 /* UIWindow+Launch.m */,
 			);
 			path = UIWindow;
-			sourceTree = "<group>";
-		};
-		E199A05F1D5880AD0097B960 /* ImageAssetsPicker */ = {
-			isa = PBXGroup;
-			children = (
-				E199A0601D5880AD0097B960 /* Cells&Views */,
-				E199A06B1D5880AD0097B960 /* CTAssetHead.h */,
-				E199A06C1D5880AD0097B960 /* images */,
-				E199A0751D5880AD0097B960 /* NSDate+TimeInterval.h */,
-				E199A0761D5880AD0097B960 /* NSDate+TimeInterval.m */,
-				E199A0771D5880AD0097B960 /* PickVC */,
-			);
-			path = ImageAssetsPicker;
-			sourceTree = "<group>";
-		};
-		E199A0601D5880AD0097B960 /* Cells&Views */ = {
-			isa = PBXGroup;
-			children = (
-				E199A0611D5880AD0097B960 /* CTAssetsGroupViewCell.h */,
-				E199A0621D5880AD0097B960 /* CTAssetsGroupViewCell.m */,
-				E199A0631D5880AD0097B960 /* CTAssetsSupplementaryView.h */,
-				E199A0641D5880AD0097B960 /* CTAssetsSupplementaryView.m */,
-				E199A0651D5880AD0097B960 /* CTAssetsViewCell.h */,
-				E199A0661D5880AD0097B960 /* CTAssetsViewCell.m */,
-				E199A0671D5880AD0097B960 /* CTImagePickBottomView.h */,
-				E199A0681D5880AD0097B960 /* CTImagePickBottomView.m */,
-				E199A0691D5880AD0097B960 /* PickPhotoFromCameraCell.h */,
-				E199A06A1D5880AD0097B960 /* PickPhotoFromCameraCell.m */,
-			);
-			path = "Cells&Views";
-			sourceTree = "<group>";
-		};
-		E199A06C1D5880AD0097B960 /* images */ = {
-			isa = PBXGroup;
-			children = (
-				E199A06D1D5880AD0097B960 /* CTAssetsPickerChecked.png */,
-				E199A06E1D5880AD0097B960 /* CTAssetsPickerChecked@2x.png */,
-				E199A06F1D5880AD0097B960 /* CTAssetsPickerChecked~iOS6.png */,
-				E199A0701D5880AD0097B960 /* CTAssetsPickerChecked~iOS6@2x.png */,
-				E199A0711D5880AD0097B960 /* CTAssetsPickerLocked.png */,
-				E199A0721D5880AD0097B960 /* CTAssetsPickerLocked@2x.png */,
-				E199A0731D5880AD0097B960 /* CTAssetsPickerVideo.png */,
-				E199A0741D5880AD0097B960 /* CTAssetsPickerVideo@2x.png */,
-			);
-			path = images;
-			sourceTree = "<group>";
-		};
-		E199A0771D5880AD0097B960 /* PickVC */ = {
-			isa = PBXGroup;
-			children = (
-				E199A0781D5880AD0097B960 /* CTAssetsGroupViewController.h */,
-				E199A0791D5880AD0097B960 /* CTAssetsGroupViewController.m */,
-				E199A07A1D5880AD0097B960 /* CTAssetsPickerController.h */,
-				E199A07B1D5880AD0097B960 /* CTAssetsPickerController.m */,
-				E199A07C1D5880AD0097B960 /* CTAssetsViewController.h */,
-				E199A07D1D5880AD0097B960 /* CTAssetsViewController.m */,
-			);
-			path = PickVC;
 			sourceTree = "<group>";
 		};
 		E199A07E1D5880AD0097B960 /* ImageBrowser */ = {
@@ -1002,7 +889,6 @@
 				E199A1681D5880AE0097B960 /* SVProgressHUD.h in Headers */,
 				E199A15E1D5880AE0097B960 /* CoreArchive.h in Headers */,
 				E199A11F1D5880AD0097B960 /* UITableViewCell+Extend.h in Headers */,
-				E199A13E1D5880AE0097B960 /* NSDate+TimeInterval.h in Headers */,
 				E199A1941D5880AE0097B960 /* SGTImageFlowViewController.h in Headers */,
 				E199A1661D5880AE0097B960 /* SVProgressHUD-Prefix.pch in Headers */,
 				E199A1231D5880AD0097B960 /* UIView+Extend.h in Headers */,
@@ -1010,20 +896,15 @@
 				E199A1091D5880AD0097B960 /* NSString+File.h in Headers */,
 				E1999B751D5867330097B960 /* SGTImageFramework.h in Headers */,
 				E199A1011D5880AD0097B960 /* NSArray+Extend.h in Headers */,
-				E199A1441D5880AE0097B960 /* CTAssetsViewController.h in Headers */,
-				E199A12F1D5880AE0097B960 /* CTAssetsViewCell.h in Headers */,
-				E199A12D1D5880AE0097B960 /* CTAssetsSupplementaryView.h in Headers */,
 				E199A1501D5880AE0097B960 /* PBPGView.h in Headers */,
 				E199A16A1D5880AE0097B960 /* LFRoundProgressView.h in Headers */,
 				E199A11B1D5880AD0097B960 /* UIImage+FixOrientation.h in Headers */,
 				E199A16C1D5880AE0097B960 /* UIImage+ReMake.h in Headers */,
 				E199A14E1D5880AE0097B960 /* PBBlurImageView.h in Headers */,
 				E199A1211D5880AD0097B960 /* UIView+DNImagePicker.h in Headers */,
-				E199A1351D5880AE0097B960 /* CTAssetHead.h in Headers */,
 				E199A14D1D5880AE0097B960 /* PhotoBroswerType.h in Headers */,
 				E199A1621D5880AE0097B960 /* CoreSVP.h in Headers */,
 				E199A10B1D5880AD0097B960 /* NSString+Password.h in Headers */,
-				E199A1401D5880AE0097B960 /* CTAssetsGroupViewController.h in Headers */,
 				E199A19E1D5880AE0097B960 /* SGTAssetsViewCell.h in Headers */,
 				E199A10D1D5880AD0097B960 /* NSURL+DNIMagePickerUrlEqual.h in Headers */,
 				E199A1171D5880AD0097B960 /* UIImage+Cut.h in Headers */,
@@ -1032,16 +913,12 @@
 				E199A1901D5880AE0097B960 /* SGTAlbumTableViewController.h in Headers */,
 				E199A1A61D5880AE0097B960 /* SGTSendButton.h in Headers */,
 				E199A11D1D5880AD0097B960 /* UIImage+Water.h in Headers */,
-				E199A1421D5880AE0097B960 /* CTAssetsPickerController.h in Headers */,
 				E199A1AA1D5880AE0097B960 /* UIImage+Tool.h in Headers */,
 				E199A1A81D5880AE0097B960 /* SGTUnAuthorizedTipsView.h in Headers */,
 				E199A1461D5880AE0097B960 /* PBConst.h in Headers */,
 				E199A1721D5880AE0097B960 /* SGTImageFramework.h in Headers */,
-				E199A12B1D5880AE0097B960 /* CTAssetsGroupViewCell.h in Headers */,
 				E199A1A41D5880AE0097B960 /* SGTFullImageButton.h in Headers */,
 				E199A1961D5880AE0097B960 /* SGTImagePickerController.h in Headers */,
-				E199A1311D5880AE0097B960 /* CTImagePickBottomView.h in Headers */,
-				E199A1331D5880AE0097B960 /* PickPhotoFromCameraCell.h in Headers */,
 				E199A0FD1D5880AD0097B960 /* CALayer+Anim.h in Headers */,
 				E199A1151D5880AD0097B960 /* UIImage+Color.h in Headers */,
 				E199A15B1D5880AE0097B960 /* PhotoBroswerVC.h in Headers */,
@@ -1139,7 +1016,6 @@
 				E199A1741D5880AE0097B960 /* assets_placeholder_picture@2x.png in Resources */,
 				E199A1751D5880AE0097B960 /* back_highlight.pdf in Resources */,
 				E199A1851D5880AE0097B960 /* photo_check_default@3x.png in Resources */,
-				E199A1391D5880AE0097B960 /* CTAssetsPickerChecked~iOS6@2x.png in Resources */,
 				E199A1791D5880AE0097B960 /* camera_edit_cut_cancel_highlighted@2x.png in Resources */,
 				E199A17E1D5880AE0097B960 /* compose_photograph_highlighted@3x.png in Resources */,
 				E199A1831D5880AE0097B960 /* photo_check_default.pdf in Resources */,
@@ -1150,14 +1026,11 @@
 				E199A1841D5880AE0097B960 /* photo_check_default@2x.png in Resources */,
 				E199A17A1D5880AE0097B960 /* compose_photograph@2x.png in Resources */,
 				E199A18D1D5880AE0097B960 /* picker_button_orange_highlighted@2x.png in Resources */,
-				E199A1371D5880AE0097B960 /* CTAssetsPickerChecked@2x.png in Resources */,
-				E199A13B1D5880AE0097B960 /* CTAssetsPickerLocked@2x.png in Resources */,
 				E199A17D1D5880AE0097B960 /* compose_photograph_highlighted@2x.png in Resources */,
 				E199A1881D5880AE0097B960 /* photo_check_selected@3x.png in Resources */,
 				E199A18F1D5880AE0097B960 /* picker_photo_filter_checked@2x.png in Resources */,
 				E199A1871D5880AE0097B960 /* photo_check_selected@2x.png in Resources */,
 				E199A1891D5880AE0097B960 /* photo_full_image_selected.pdf in Resources */,
-				E199A13A1D5880AE0097B960 /* CTAssetsPickerLocked.png in Resources */,
 				E199A17F1D5880AE0097B960 /* image_unAuthorized.pdf in Resources */,
 				E199A1671D5880AE0097B960 /* SVProgressHUD.bundle in Resources */,
 				E199A17C1D5880AE0097B960 /* compose_photograph_background@2x.png in Resources */,
@@ -1165,14 +1038,10 @@
 				E199A1821D5880AE0097B960 /* navigationbar_title_highlighted@2x.png in Resources */,
 				E199A18E1D5880AE0097B960 /* picker_image_placeholder@2x.png in Resources */,
 				E199A1801D5880AE0097B960 /* navigationbar_arrow_down@2x.png in Resources */,
-				E199A1361D5880AE0097B960 /* CTAssetsPickerChecked.png in Resources */,
 				E199A17B1D5880AE0097B960 /* compose_photograph@3x.png in Resources */,
-				E199A13C1D5880AE0097B960 /* CTAssetsPickerVideo.png in Resources */,
 				E199A1781D5880AE0097B960 /* camera_edit_cut_cancel@2x.png in Resources */,
 				E199A18B1D5880AE0097B960 /* picker_alert_sigh@2x.png in Resources */,
-				E199A13D1D5880AE0097B960 /* CTAssetsPickerVideo@2x.png in Resources */,
 				E199A1731D5880AE0097B960 /* DNImagePickerController.strings in Resources */,
-				E199A1381D5880AE0097B960 /* CTAssetsPickerChecked~iOS6.png in Resources */,
 				E199A1771D5880AE0097B960 /* back_normal@2x.png in Resources */,
 				E199A1761D5880AE0097B960 /* back_highlight@2x.png in Resources */,
 			);
@@ -1225,16 +1094,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E199A13F1D5880AE0097B960 /* NSDate+TimeInterval.m in Sources */,
 				E199A1471D5880AE0097B960 /* PBConst.m in Sources */,
 				E199A1911D5880AE0097B960 /* SGTAlbumTableViewController.m in Sources */,
-				E199A1431D5880AE0097B960 /* CTAssetsPickerController.m in Sources */,
 				E199A1691D5880AE0097B960 /* SVProgressHUD.m in Sources */,
 				E199A1A31D5880AE0097B960 /* SGTBrowserCell.m in Sources */,
-				E199A1451D5880AE0097B960 /* CTAssetsViewController.m in Sources */,
-				E199A1341D5880AE0097B960 /* PickPhotoFromCameraCell.m in Sources */,
-				E199A12E1D5880AE0097B960 /* CTAssetsSupplementaryView.m in Sources */,
-				E199A12C1D5880AE0097B960 /* CTAssetsGroupViewCell.m in Sources */,
 				E199A15F1D5880AE0097B960 /* CoreArchive.m in Sources */,
 				E199A1201D5880AD0097B960 /* UITableViewCell+Extend.m in Sources */,
 				E199A1AB1D5880AE0097B960 /* UIImage+Tool.m in Sources */,
@@ -1263,7 +1126,6 @@
 				E199A1281D5880AD0097B960 /* UIViewController+DNImagePicker.m in Sources */,
 				E199A1241D5880AD0097B960 /* UIView+Extend.m in Sources */,
 				E199A10A1D5880AD0097B960 /* NSString+File.m in Sources */,
-				E199A1411D5880AE0097B960 /* CTAssetsGroupViewController.m in Sources */,
 				E199A1591D5880AE0097B960 /* PhotoItemView.m in Sources */,
 				E199A1711D5880AE0097B960 /* UIImageView+SD.m in Sources */,
 				E199A15C1D5880AE0097B960 /* PhotoBroswerVC.m in Sources */,
@@ -1271,14 +1133,12 @@
 				E199A1161D5880AD0097B960 /* UIImage+Color.m in Sources */,
 				E199A14B1D5880AE0097B960 /* PhotoModel.m in Sources */,
 				E199A1511D5880AE0097B960 /* PBPGView.m in Sources */,
-				E199A1301D5880AE0097B960 /* CTAssetsViewCell.m in Sources */,
 				E199A19F1D5880AE0097B960 /* SGTAssetsViewCell.m in Sources */,
 				E199A11C1D5880AD0097B960 /* UIImage+FixOrientation.m in Sources */,
 				E199A1951D5880AE0097B960 /* SGTImageFlowViewController.m in Sources */,
 				E199A10E1D5880AD0097B960 /* NSURL+DNIMagePickerUrlEqual.m in Sources */,
 				E199A1101D5880AD0097B960 /* UIColor+Hex.m in Sources */,
 				E199A19D1D5880AE0097B960 /* MWTapDetectingImageView.m in Sources */,
-				E199A1321D5880AE0097B960 /* CTImagePickBottomView.m in Sources */,
 				E199A1571D5880AE0097B960 /* PhotoImageView.m in Sources */,
 				E199A14F1D5880AE0097B960 /* PBBlurImageView.m in Sources */,
 				E199A16B1D5880AE0097B960 /* LFRoundProgressView.m in Sources */,

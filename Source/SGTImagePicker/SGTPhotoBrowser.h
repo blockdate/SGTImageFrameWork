@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AssetsLibrary/AssetsLibrary.h>
+
 
 @class SGTImageFlowViewController;
 @class SGTPhotoBrowser,SGTImageAsset;

@@ -114,11 +114,6 @@
 #import "PhotoModel.h"
 #import "PhotoBroswerType.h"
 
-
-
-
-
-
 @interface PhotoBroswerVC : UIViewController
 
 +(void)show:(UIViewController *)handleVC isLocal:(BOOL)islocal type:(PhotoBroswerVCType)type index:(NSUInteger)index photoModelBlock:(NSArray *(^)())photoModelBlock;

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AssetsLibrary/AssetsLibrary.h>
+
 @interface SGTImageFlowViewController : UIViewController
 
 @property (nonatomic, assign) NSInteger kDNImageFlowMaxSeletedNumber;

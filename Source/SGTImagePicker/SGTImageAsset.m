@@ -8,6 +8,7 @@
 
 #import "SGTImageAsset.h"
 #import "NSURL+DNIMagePickerUrlEqual.h"
+#import <AssetsLibrary/AssetsLibrary.h>
 #import <CommonCrypto/CommonDigest.h>
 
 @interface SGTImageAsset()

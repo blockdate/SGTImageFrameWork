@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SGTImageAsset.h"
-@class ALAssetsFilter;
+
+@class ALAssetsFilter, SGTImageAsset;
 FOUNDATION_EXTERN NSString *kDNImagePickerStoredGroupKey;
 typedef NS_ENUM(NSUInteger, SGTImagePickerFilterType) {
     None,

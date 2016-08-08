@@ -94,7 +94,7 @@ Pod::Spec.new do |s|
   s.source_files  = "Source", "Source/**/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
 
-  s.public_header_files = "Source/**/*.h"
+  s.public_header_files = "Source/SGTImagePicker/**/*.h", "Source/ImageBrowser/CorePhotoBroswerVC/**/*.h", "Source/SDWebImage/**/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -107,7 +107,7 @@ Pod::Spec.new do |s|
 
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
-  s.resources = 'Source/**/*.{png,pdf,xib,bundle}'
+  s.resources = 'Source/**/*.{png,pdf,xib,bundle,strings}'
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
 
@@ -118,7 +118,7 @@ Pod::Spec.new do |s|
   #
 
   # s.framework  = "SomeFramework"
-  s.frameworks = "UIKit"
+  s.frameworks = "UIKit", "CoreGraphics"
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
@@ -135,6 +135,5 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   s.dependency 'Masonry', '~> 0.6.3'
   s.dependency 'SDWebImage', '~> 3.7.3'
-  # s.dependency 'ReactiveCocoa', '~> 2.5'
 
 end

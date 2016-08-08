@@ -10,6 +10,7 @@
 #import "SGTImagePickerController.h"
 #import "SGTAlbumTableViewController.h"
 #import "SGTImageFlowViewController.h"
+#import "SGTImageAsset.h"
 
 NSString *kDNImagePickerStoredGroupKey = @"com.dennis.kDNImagePickerStoredGroup";
 
