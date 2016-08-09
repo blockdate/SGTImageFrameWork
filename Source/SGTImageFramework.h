@@ -8,6 +8,7 @@
 
 #import "UIImage+Tool.h"
 #import "UIImageView+SD.h"
-#import "DNImagePickerController.h"
-#import "DNPhotoBrowser.h"
+#import "SGTImagePickerController.h"
+#import "SGTPhotoBrowser.h"
 #import "PhotoBroswerVC.h"
+#import "SGTImageAsset.h"
