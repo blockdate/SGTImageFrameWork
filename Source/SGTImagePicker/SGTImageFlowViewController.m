@@ -105,8 +105,8 @@ static NSString* const dnAssetsViewCellReuseIdentifier = @"DNAssetsViewCell";
 {
     self.view.backgroundColor = [UIColor whiteColor];
     [self createBarButtonItemAtPosition:Left
-                      statusNormalImage:[UIImage imageNamed:@"back_normal"]
-                   statusHighlightImage:[UIImage imageNamed:@"back_highlight"]
+                      statusNormalImage:[UIImage imageNamed:@"SGTImagePickerBundle.bundle/back_normal"]
+                   statusHighlightImage:[UIImage imageNamed:@"SGTImagePickerBundle.bundle/back_highlight"]
                                  action:@selector(backButtonAction)];
     [self createBarButtonItemAtPosition:Right
                                    text:NSLocalizedStringFromTable(@"cancel", @"DNImagePicker", @"取消")

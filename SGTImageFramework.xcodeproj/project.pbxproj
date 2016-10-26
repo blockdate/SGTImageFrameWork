@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		600DD6391DC05AB400E0E581 /* SGTImageFramework.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 600DD6381DC05AB400E0E581 /* SGTImageFramework.podspec */; };
 		C70435A8E204D3DDF96D2B9B /* libPods-SGTImageFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE4BD889E0948DF218BE2A0 /* libPods-SGTImageFramework.a */; };
 		E1999B751D5867330097B960 /* SGTImageFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = E1999B741D5867330097B960 /* SGTImageFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E1999B7C1D5867330097B960 /* SGTImageFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1999B711D5867330097B960 /* SGTImageFramework.framework */; };
@@ -176,6 +177,7 @@
 /* Begin PBXFileReference section */
 		049CB37C8B326C1A12E08F88 /* Pods-SGTImageFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGTImageFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SGTImageFramework/Pods-SGTImageFramework.debug.xcconfig"; sourceTree = "<group>"; };
 		3FE4BD889E0948DF218BE2A0 /* libPods-SGTImageFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SGTImageFramework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		600DD6381DC05AB400E0E581 /* SGTImageFramework.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SGTImageFramework.podspec; sourceTree = "<group>"; };
 		7F66930A806D91865A21A4D4 /* Pods-SGTImageFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGTImageFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-SGTImageFramework/Pods-SGTImageFramework.release.xcconfig"; sourceTree = "<group>"; };
 		E1999B711D5867330097B960 /* SGTImageFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SGTImageFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1999B741D5867330097B960 /* SGTImageFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGTImageFramework.h; sourceTree = "<group>"; };
@@ -376,6 +378,7 @@
 		E1999B671D5867330097B960 = {
 			isa = PBXGroup;
 			children = (
+				600DD6381DC05AB400E0E581 /* SGTImageFramework.podspec */,
 				E199A01F1D5880AD0097B960 /* Source */,
 				E1999B731D5867330097B960 /* SGTImageFramework */,
 				E1999B7F1D5867330097B960 /* SGTImageFrameworkTests */,
@@ -1043,6 +1046,7 @@
 				E199A18B1D5880AE0097B960 /* picker_alert_sigh@2x.png in Resources */,
 				E199A1731D5880AE0097B960 /* DNImagePickerController.strings in Resources */,
 				E199A1771D5880AE0097B960 /* back_normal@2x.png in Resources */,
+				600DD6391DC05AB400E0E581 /* SGTImageFramework.podspec in Resources */,
 				E199A1761D5880AE0097B960 /* back_highlight@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

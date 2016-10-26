@@ -55,7 +55,7 @@ static ALAssetsLibrary* _sharedLibrary = nil;
 - (UIImage *)image {
     if (_alAsset != nil) {
         CGImageRef thumbnailImageRef = [_alAsset thumbnail];
-        return thumbnailImageRef==nil?[UIImage imageNamed:@"assets_placeholder_picture"]:[UIImage imageWithCGImage:thumbnailImageRef];
+        return thumbnailImageRef==nil?[UIImage imageNamed:@"SGTImagePickerBundle.bundle/assets_placeholder_picture"]:[UIImage imageWithCGImage:thumbnailImageRef];
     }else {
         return _imageAsset;
     }

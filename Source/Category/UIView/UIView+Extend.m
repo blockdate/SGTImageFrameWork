@@ -80,8 +80,7 @@
 +(instancetype)viewFromXIB{
     
     NSString *name=NSStringFromClass(self);
-    
-    UIView *xibView=[[[NSBundle mainBundle] loadNibNamed:name owner:nil options:nil] firstObject];
+    UIView *xibView=[[[NSBundle bundleForClass:[self class]] loadNibNamed:name owner:nil options:nil] firstObject];
     
     if(xibView==nil){
         NSLog(@"CoreXibView：从xib创建视图失败，当前类是：%@",name);

@@ -45,9 +45,9 @@
  */
 -(void)viewPrepare{
     
-    [self setImage:[UIImage imageNamed:@"preview_save_icon"] forState:UIControlStateNormal];
-    [self setImage:[UIImage imageNamed:@"preview_save_icon_highlighted"] forState:UIControlStateHighlighted];
-    [self setImage:[UIImage imageNamed:@"preview_save_icon_disable"] forState:UIControlStateDisabled];
+    [self setImage:[UIImage imageNamed:@"SGTImagePickerBundle.bundle/preview_save_icon"] forState:UIControlStateNormal];
+    [self setImage:[UIImage imageNamed:@"SGTImagePickerBundle.bundle/preview_save_icon_highlighted"] forState:UIControlStateHighlighted];
+    [self setImage:[UIImage imageNamed:@"SGTImagePickerBundle.bundle/preview_save_icon_disable"] forState:UIControlStateDisabled];
 }
 
 
