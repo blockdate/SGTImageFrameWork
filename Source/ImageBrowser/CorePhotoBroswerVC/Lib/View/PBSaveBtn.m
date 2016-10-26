@@ -7,6 +7,7 @@
 //
 
 #import "PBSaveBtn.h"
+#import "UIImage+Extend.h"
 
 @implementation PBSaveBtn
 
@@ -44,10 +45,9 @@
  *  视图准备
  */
 -(void)viewPrepare{
-    
-    [self setImage:[UIImage imageNamed:@"SGTImagePickerBundle.bundle/preview_save_icon"] forState:UIControlStateNormal];
-    [self setImage:[UIImage imageNamed:@"SGTImagePickerBundle.bundle/preview_save_icon_highlighted"] forState:UIControlStateHighlighted];
-    [self setImage:[UIImage imageNamed:@"SGTImagePickerBundle.bundle/preview_save_icon_disable"] forState:UIControlStateDisabled];
+    [self setImage:[UIImage sgt_imageWithBundleName:@"SGTImagePickerBundle" imageName:@"preview_save_icon"] forState:UIControlStateNormal];
+    [self setImage:[UIImage sgt_imageWithBundleName:@"SGTImagePickerBundle" imageName:@"preview_save_icon_highlighted"] forState:UIControlStateHighlighted];
+    [self setImage:[UIImage sgt_imageWithBundleName:@"SGTImagePickerBundle" imageName:@"preview_save_icon_disable"] forState:UIControlStateDisabled];
 }
 
 

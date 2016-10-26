@@ -9,7 +9,7 @@
 #import "UIImage+Extend.h"
 #import "CoreConst.h"
 #import <objc/runtime.h>
-
+#import "SGTImagePickerController.h"
 static const void *CompleteBlockKey = &CompleteBlockKey;
 static const void *FailBlockKey = &FailBlockKey;
 
@@ -137,6 +137,15 @@ static const void *FailBlockKey = &FailBlockKey;
 
 -(void)setCompleteBlock:(void (^)())CompleteBlock{
     objc_setAssociatedObject(self, CompleteBlockKey, CompleteBlock, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
++ (NSBundle *)sgt_imageFramworkBundle {
+    return [NSBundle bundleForClass:[self class]];
+}
+
++ (UIImage *)sgt_imageWithBundleName:(NSString *)bundleName imageName:(NSString *)imageName {
+    NSBundle *bundle = [NSBundle bundleWithPath:[[NSBundle bundleForClass:[SGTImagePickerController class]] pathForResource:bundleName ofType:@"bundle"]];;
+    return [UIImage imageNamed:imageName inBundle:bundle compatibleWithTraitCollection:nil];
 }
 
 @end

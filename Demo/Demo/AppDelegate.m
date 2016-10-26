@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "SGTImagePickerController.h"
+@import UIKit;
 
 @interface AppDelegate ()
 

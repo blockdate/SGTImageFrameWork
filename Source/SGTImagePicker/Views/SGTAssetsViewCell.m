@@ -8,7 +8,7 @@
 
 #import "SGTAssetsViewCell.h"
 #import "SGTImageAsset.h"
-
+#import "UIImage+Extend.h"
 @interface SGTAssetsViewCell ()
 @property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, strong) UIButton *checkButton;
@@ -144,7 +144,7 @@
 - (void)updateCheckImageView
 {
     if (self.checkButton.selected) {
-        self.checkImageView.image = [UIImage imageNamed:@"SGTImagePickerBundle.bundle/photo_check_selected"];
+        self.checkImageView.image = [UIImage sgt_imageWithBundleName:@"SGTImagePickerBundle" imageName:@"photo_check_selected"];
         
         [UIView animateWithDuration:0.2 animations:^{
             self.checkImageView.transform = CGAffineTransformMakeScale(1.2, 1.2);
@@ -155,7 +155,7 @@
                              }];
                          }];
     } else {
-        self.checkImageView.image = [UIImage imageNamed:@"SGTImagePickerBundle.bundle/photo_check_default"];
+        self.checkImageView.image = [UIImage sgt_imageWithBundleName:@"SGTImagePickerBundle" imageName:@"photo_check_default"];
     }
 }
 

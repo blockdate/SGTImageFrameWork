@@ -7,7 +7,7 @@
 //
 
 #import "CoreSVP.h"
-
+#import "UIImage+Extend.h"
 #define rgba(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
 
 
@@ -39,11 +39,11 @@
         [SVProgressHUD setDuration:duration];
 
         
-        //错误图片
-        [SVProgressHUD setErrorImage:[UIImage imageNamed:@"CoreSVP.bundle/SVPError"]];
+        //错误图片[UIImage imageNamed:@"CoreSVP.bundle/SVPError"]
+        [SVProgressHUD setErrorImage:[UIImage sgt_imageWithBundleName:@"CoreSVP" imageName:@"SVPError"]];
         
         //成功图片
-        [SVProgressHUD setSuccessImage:[UIImage imageNamed:@"CoreSVP.bundle/SVPSuccess"]];
+        [SVProgressHUD setSuccessImage:[UIImage sgt_imageWithBundleName:@"CoreSVP" imageName:@"SVPSuccess"]];
         
         SVProgressHUDMaskType maskType=allowEdit?SVProgressHUDMaskTypeNone:SVProgressHUDMaskTypeClear;
         [SVProgressHUD setDefaultMaskType:maskType];

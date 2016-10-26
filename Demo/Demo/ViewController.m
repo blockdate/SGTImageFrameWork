@@ -7,7 +7,9 @@
 //
 
 #import "ViewController.h"
-#import "SGTImagePickerController.h"
+#import <SGTImageFramework/SGTImagePickerController.h>
+#import <ReactiveObjC/ReactiveObjC.h>
+
 @interface ViewController ()
 
 @end
@@ -20,6 +22,7 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
     SGTImagePickerController *c = [[SGTImagePickerController alloc] initWithMaxCount:9];
     [self presentViewController:c animated:true completion:nil];
 }

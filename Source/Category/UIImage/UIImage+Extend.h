@@ -45,6 +45,6 @@
  */
 -(void)savedPhotosAlbum:(void(^)())completeBlock failBlock:(void(^)())failBlock;
 
-
++ (UIImage *)sgt_imageWithBundleName:(NSString *)bundleName imageName:(NSString *)imageName;
 
 @end

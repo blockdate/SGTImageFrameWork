@@ -7,6 +7,7 @@
 //
 
 #import "SGTUnAuthorizedTipsView.h"
+#import "UIImage+Extend.h"
 
 @implementation SGTUnAuthorizedTipsView
 
@@ -54,7 +55,7 @@
 {
     if (_imageView == nil) {
         _imageView = [UIImageView new];
-        _imageView.image = [UIImage imageNamed:@"SGTImagePickerBundle.bundle/image_unAuthorized"];
+        _imageView.image = [UIImage sgt_imageWithBundleName:@"SGTImagePickerBundle" imageName:@"image_unAuthorized"];
         [_imageView setTranslatesAutoresizingMaskIntoConstraints:NO];
         [self addSubview:_imageView];
     }

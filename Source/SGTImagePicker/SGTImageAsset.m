@@ -10,6 +10,7 @@
 #import "NSURL+DNIMagePickerUrlEqual.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <CommonCrypto/CommonDigest.h>
+#import "UIImage+Extend.h"
 
 @interface SGTImageAsset()
 
@@ -55,7 +56,7 @@ static ALAssetsLibrary* _sharedLibrary = nil;
 - (UIImage *)image {
     if (_alAsset != nil) {
         CGImageRef thumbnailImageRef = [_alAsset thumbnail];
-        return thumbnailImageRef==nil?[UIImage imageNamed:@"SGTImagePickerBundle.bundle/assets_placeholder_picture"]:[UIImage imageWithCGImage:thumbnailImageRef];
+        return thumbnailImageRef==nil?[UIImage sgt_imageWithBundleName:@"SGTImagePickerBundle" imageName:@"assets_placeholder_picture"]:[UIImage imageWithCGImage:thumbnailImageRef];
     }else {
         return _imageAsset;
     }

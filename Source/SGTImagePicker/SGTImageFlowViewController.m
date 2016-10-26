@@ -17,6 +17,7 @@
 #import "SGTImageAsset.h"
 #import "NSURL+DNIMagePickerUrlEqual.h"
 #import <AssetsLibrary/AssetsLibrary.h>
+#import "UIImage+Extend.h"
 
 //static NSUInteger kDNImageFlowMaxSeletedNumber = 9;
 
@@ -105,8 +106,8 @@ static NSString* const dnAssetsViewCellReuseIdentifier = @"DNAssetsViewCell";
 {
     self.view.backgroundColor = [UIColor whiteColor];
     [self createBarButtonItemAtPosition:Left
-                      statusNormalImage:[UIImage imageNamed:@"SGTImagePickerBundle.bundle/back_normal"]
-                   statusHighlightImage:[UIImage imageNamed:@"SGTImagePickerBundle.bundle/back_highlight"]
+                      statusNormalImage:[UIImage sgt_imageWithBundleName:@"SGTImagePickerBundle" imageName:@"back_normal"]
+                   statusHighlightImage:[UIImage sgt_imageWithBundleName:@"SGTImagePickerBundle" imageName:@"back_highlight"]
                                  action:@selector(backButtonAction)];
     [self createBarButtonItemAtPosition:Right
                                    text:NSLocalizedStringFromTable(@"cancel", @"DNImagePicker", @"取消")

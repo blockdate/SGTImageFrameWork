@@ -13,6 +13,7 @@
 #import "SGTFullImageButton.h"
 #import "SGTBrowserCell.h"
 #import "SGTImageAsset.h"
+#import "UIImage+Extend.h"
 
 @interface SGTPhotoBrowser () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 {
@@ -130,8 +131,8 @@
     [self toolbar];
     [self setupBarButtonItems];
     [self createBarButtonItemAtPosition:Left
-                      statusNormalImage:[UIImage imageNamed:@"SGTImagePickerBundle.bundle/back_normal"]
-                   statusHighlightImage:[UIImage imageNamed:@"SGTImagePickerBundle.bundle/back_highlight"]
+                      statusNormalImage:[UIImage sgt_imageWithBundleName:@"SGTImagePickerBundle" imageName:@"back_normal"]
+                   statusHighlightImage:[UIImage sgt_imageWithBundleName:@"SGTImagePickerBundle" imageName:@"back_highlight"]
                                  action:@selector(backButtonAction)];
     UIBarButtonItem *rightButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.checkButton];
     self.navigationItem.rightBarButtonItem = rightButtonItem;
@@ -296,8 +297,8 @@
     if (nil == _checkButton) {
         _checkButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _checkButton.frame = CGRectMake(0, 0, 25, 25);
-        [_checkButton setBackgroundImage:[UIImage imageNamed:@"SGTImagePickerBundle.bundle/photo_check_selected"] forState:UIControlStateSelected];
-        [_checkButton setBackgroundImage:[UIImage imageNamed:@"SGTImagePickerBundle.bundle/photo_check_default"] forState:UIControlStateNormal];
+        [_checkButton setBackgroundImage:[UIImage sgt_imageWithBundleName:@"SGTImagePickerBundle" imageName:@"photo_check_selected"] forState:UIControlStateSelected];
+        [_checkButton setBackgroundImage:[UIImage sgt_imageWithBundleName:@"SGTImagePickerBundle" imageName:@"photo_check_default"] forState:UIControlStateNormal];
         [_checkButton addTarget:self action:@selector(checkButtonAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _checkButton;

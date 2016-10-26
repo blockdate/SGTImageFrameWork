@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SGTImageFramework"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "This is a private pod sp. provide image picker and viewer function"
 
   s.description  = <<-DESC
@@ -21,11 +21,9 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://bitbucket.org/sgtfundation/sgtimageframework.git", :tag => s.version.to_s }
 
 
-  s.source_files  = "Source", "Source/**/*.{h,m}"
+  s.source_files  = "Source/**/*.{h,m}"
 
   s.public_header_files = "Source/SGTImagePicker/**/*.h", "Source/ImageBrowser/CorePhotoBroswerVC/**/*.h", "Source/SDWebImage/**/*.h"
-
-
 
   s.resources = 'Source/**/*.{png,pdf,xib,bundle,strings}'
 

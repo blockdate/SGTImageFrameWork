@@ -13,6 +13,7 @@
 #import "SVProgressHUD.h"
 #import "SVIndefiniteAnimatedView.h"
 #import <QuartzCore/QuartzCore.h>
+#import "UIImage+Extend.h"
 
 NSString * const SVProgressHUDDidReceiveTouchEventNotification = @"SVProgressHUDDidReceiveTouchEventNotification";
 NSString * const SVProgressHUDDidTouchDownInsideNotification = @"SVProgressHUDDidTouchDownInsideNotification";
@@ -277,13 +278,13 @@ static const CGFloat SVProgressHUDUndefinedProgress = -1;
             SVProgressHUDForegroundColor = [UIColor whiteColor];
         }
         if ([[UIImage class] instancesRespondToSelector:@selector(imageWithRenderingMode:)]) {
-            SVProgressHUDInfoImage = [[UIImage imageNamed:@"SVProgressHUD.bundle/info"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-            SVProgressHUDSuccessImage = [[UIImage imageNamed:@"SVProgressHUD.bundle/success"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-            SVProgressHUDErrorImage = [[UIImage imageNamed:@"SVProgressHUD.bundle/error"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+            SVProgressHUDInfoImage = [[UIImage sgt_imageWithBundleName:@"SVProgressHUD" imageName:@"info"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+            SVProgressHUDSuccessImage = [[UIImage sgt_imageWithBundleName:@"SVProgressHUD" imageName:@"success"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+            SVProgressHUDErrorImage = [[UIImage sgt_imageWithBundleName:@"SVProgressHUD" imageName:@"error"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
         } else {
-            SVProgressHUDInfoImage = [UIImage imageNamed:@"SVProgressHUD.bundle/info"];
-            SVProgressHUDSuccessImage = [UIImage imageNamed:@"SVProgressHUD.bundle/success"];
-            SVProgressHUDErrorImage = [UIImage imageNamed:@"SVProgressHUD.bundle/error"];
+            SVProgressHUDInfoImage = [UIImage sgt_imageWithBundleName:@"SVProgressHUD" imageName:@"info"];
+            SVProgressHUDSuccessImage = [UIImage sgt_imageWithBundleName:@"SVProgressHUD" imageName:@"success"];
+            SVProgressHUDErrorImage = [UIImage sgt_imageWithBundleName:@"SVProgressHUD" imageName:@"error"];
         }
         SVProgressHUDRingThickness = 2;
         SVProgressHUDDefaultMaskType = SVProgressHUDMaskTypeNone;
