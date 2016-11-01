@@ -111,7 +111,7 @@
     
     
     
-    PhotoBroswerVC *pbVC = [[self alloc] init];
+    PhotoBroswerVC *pbVC = [[PhotoBroswerVC alloc] initWithNibName:@"PhotoBroswerVC" bundle:[NSBundle bundleForClass:[PhotoBroswerVC class]]];
     pbVC.reportblock = reportblock;
     
     if(index >= photoModels.count){
