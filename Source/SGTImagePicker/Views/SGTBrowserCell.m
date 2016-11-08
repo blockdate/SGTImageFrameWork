@@ -8,7 +8,7 @@
 
 #import "SGTBrowserCell.h"
 #import "MWTapDetectingImageView.h"
-#import "SGTPhotoBrowser.h"
+#import "SGTPhotoPickerBrowser.h"
 #import "SGTImageAsset.h"
 
 @interface SGTBrowserCell () <UIScrollViewDelegate,MWTapDetectingImageViewDelegate>

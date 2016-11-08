@@ -12,6 +12,7 @@
 #import "SGTImageFlowViewController.h"
 #import "UIViewController+DNImagePicker.h"
 #import "SGTUnAuthorizedTipsView.h"
+#import "NSBundle+SGTCurrent.h"
 
 static NSString* const dnalbumTableViewCellReuseIdentifier = @"dnalbumTableViewCellReuseIdentifier";
 
@@ -63,9 +64,9 @@ static NSString* const dnalbumTableViewCellReuseIdentifier = @"dnalbumTableViewC
 
 - (void)setupView
 {
-    self.title = NSLocalizedStringFromTable(@"albumTitle", @"DNImagePicker", @"photos");
+    self.title = NSLocalizedStringFromTableInBundle(@"albumTitle", @"DNImagePickerController",[NSBundle sgt_currentBundle], @"photos");
     [self createBarButtonItemAtPosition:Right
-                                   text:NSLocalizedStringFromTable(@"cancel", @"DNImagePicker", @"取消")
+                                   text:NSLocalizedStringFromTableInBundle(@"cancel", @"DNImagePickerController",[NSBundle sgt_currentBundle], @"取消")
                                  action:@selector(cancelAction:)];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:dnalbumTableViewCellReuseIdentifier];

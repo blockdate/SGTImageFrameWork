@@ -10,7 +10,7 @@
 
 @interface SGTSendButton : UIView
 
-@property (nonatomic, copy) NSString *badgeValue;
+@property (nonatomic, strong) NSString *badgeValue;
 
 - (instancetype)initWithFrame:(CGRect)frame;
 

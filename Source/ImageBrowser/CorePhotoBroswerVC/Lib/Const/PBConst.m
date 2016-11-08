@@ -16,20 +16,4 @@
 /** 间距 */
 const CGFloat PBMargin = 20.0f;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #endif

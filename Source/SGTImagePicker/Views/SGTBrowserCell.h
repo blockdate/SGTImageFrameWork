@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <AssetsLibrary/AssetsLibrary.h>
-@class SGTPhotoBrowser,SGTImageAsset;
+@class SGTPhotoPickerBrowser,SGTImageAsset;
 
 @interface SGTBrowserCell : UICollectionViewCell
 
-@property (nonatomic, weak) SGTPhotoBrowser *photoBrowser;
+@property (nonatomic, weak) SGTPhotoPickerBrowser *photoBrowser;
 
 @property (nonatomic, strong) ALAsset *asset;
 

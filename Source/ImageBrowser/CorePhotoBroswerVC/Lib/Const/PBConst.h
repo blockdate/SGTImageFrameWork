@@ -10,31 +10,11 @@
 #ifndef _PBCONST_H_
 #define _PBCONST_H_
 
-
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-
-
-
 /** 间距 */
 extern const CGFloat PBMargin;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif
 

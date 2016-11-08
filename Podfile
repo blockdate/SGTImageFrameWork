@@ -9,14 +9,18 @@ target 'SGTImageFramework' do
     project 'SGTImageFramework.xcodeproj'
     platform :ios, '8.0'
     pod 'ReactiveObjC'
-    pod 'Masonry', '~> 0.6.3'
-    pod 'SDWebImage', '~> 3.7.3'
+    pod 'Masonry'
+    pod 'SDWebImage'
+    pod 'DACircularProgress'
+    pod 'pop'
 end
 
  target 'Demo' do
      project 'Demo/Demo.xcodeproj'
      platform :ios, '8.0'
-     pod 'SGTImageFramework', :path => '../SGTImageFramework'
-     pod 'Masonry', '~> 0.6.3'
-     pod 'SDWebImage', '~> 3.7.3'
+     pod 'Masonry'
+     pod 'SDWebImage'
+     pod 'DACircularProgress'
+     pod 'pop'
+     pod 'Reveal-iOS-SDK', :configurations => ['Debug']
  end

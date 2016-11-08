@@ -8,7 +8,7 @@
 
 #import "SGTImageFlowViewController.h"
 #import "SGTImagePickerController.h"
-#import "SGTPhotoBrowser.h"
+#import "SGTPhotoPickerBrowser.h"
 #import "UIViewController+DNImagePicker.h"
 #import "UIView+DNImagePicker.h"
 #import "UIColor+Hex.h"
@@ -18,10 +18,11 @@
 #import "NSURL+DNIMagePickerUrlEqual.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "UIImage+Extend.h"
+#import "NSBundle+SGTCurrent.h"
 
 //static NSUInteger kDNImageFlowMaxSeletedNumber = 9;
 
-@interface SGTImageFlowViewController () <UICollectionViewDataSource, UICollectionViewDelegate, SGTAssetsViewCellDelegate, SGTPhotoBrowserDelegate>
+@interface SGTImageFlowViewController () <UICollectionViewDataSource, UICollectionViewDelegate, SGTAssetsViewCellDelegate, SGTPhotoPickerBrowserDelegate>
 
 @property (nonatomic, strong) NSURL *assetsGroupURL;
 @property (nonatomic, strong) ALAssetsLibrary *assetsLibrary;
@@ -110,12 +111,12 @@ static NSString* const dnAssetsViewCellReuseIdentifier = @"DNAssetsViewCell";
                    statusHighlightImage:[UIImage sgt_imageWithBundleName:@"SGTImagePickerBundle" imageName:@"back_highlight"]
                                  action:@selector(backButtonAction)];
     [self createBarButtonItemAtPosition:Right
-                                   text:NSLocalizedStringFromTable(@"cancel", @"DNImagePicker", @"取消")
+                                   text:NSLocalizedStringFromTableInBundle(@"cancel", @"DNImagePickerController", [NSBundle sgt_currentBundle], @"取消")
                                  action:@selector(cancelAction)];
     
     [self imageFlowCollectionView];
     
-    UIBarButtonItem *item1 = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedStringFromTable(@"preview", @"DNImagePicker", @"预览") style:UIBarButtonItemStylePlain target:self action:@selector(previewAction)];
+    UIBarButtonItem *item1 = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"preview", @"DNImagePickerController", [NSBundle sgt_currentBundle], @"预览") style:UIBarButtonItemStylePlain target:self action:@selector(previewAction)];
     [item1 setTintColor:[UIColor blackColor]];
     item1.enabled = NO;
     
@@ -189,13 +190,6 @@ static NSString* const dnAssetsViewCellReuseIdentifier = @"DNAssetsViewCell";
     [self.selectedAssetsArray addObject:asset];
 }
 
-- (SGTImageAsset *)dnassetFromALAsset:(SGTImageAsset *)ALAsset
-{
-    SGTImageAsset *asset = [[SGTImageAsset alloc] initWithAlasset:ALAsset];
-//    asset.url = [DNAsset valueForProperty:ALAssetPropertyAssetURL];
-    return asset;
-}
-
 - (NSArray *)seletedDNAssetArray
 {
     NSMutableArray *seletedArray = [NSMutableArray new];
@@ -223,7 +217,7 @@ static NSString* const dnAssetsViewCellReuseIdentifier = @"DNAssetsViewCell";
 
 - (void)browserPhotoAsstes:(NSArray *)assets pageIndex:(NSInteger)page
 {
-    SGTPhotoBrowser *browser = [[SGTPhotoBrowser alloc] initWithPhotos:assets
+    SGTPhotoPickerBrowser *browser = [[SGTPhotoPickerBrowser alloc] initWithPhotos:assets
                                                         currentIndex:page
                                                            fullImage:self.isFullImage];
     browser.delegate = self;
@@ -240,7 +234,7 @@ static NSString* const dnAssetsViewCellReuseIdentifier = @"DNAssetsViewCell";
     UIBarButtonItem *firstItem = self.toolbarItems.firstObject;
     firstItem.enabled = YES;
     if (self.selectedAssetsArray.count >= _kDNImageFlowMaxSeletedNumber) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTable(@"alertTitle", @"DNImagePicker", nil) message:[NSString stringWithFormat:@"图片最多允许选择%@张",@(_kDNImageFlowMaxSeletedNumber)] delegate:self cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"alertTitle", @"DNImagePickerController", [NSBundle sgt_currentBundle], nil) message:[NSString stringWithFormat:@"图片最多允许选择%@张",@(_kDNImageFlowMaxSeletedNumber)] delegate:self cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
         [alert show];
         
         return NO;
@@ -378,7 +372,7 @@ static NSString* const dnAssetsViewCellReuseIdentifier = @"DNAssetsViewCell";
 }
 
 #pragma mark - DNPhotoBrowserDelegate
-- (void)sendImagesFromPhotobrowser:(SGTPhotoBrowser *)photoBrowser currentAsset:(SGTImageAsset *)asset
+- (void)sendImagesFromPhotobrowser:(SGTPhotoPickerBrowser *)photoBrowser currentAsset:(SGTImageAsset *)asset
 {
     if (self.selectedAssetsArray.count <= 0) {
         [self seletedAssets:asset];
@@ -387,29 +381,29 @@ static NSString* const dnAssetsViewCellReuseIdentifier = @"DNAssetsViewCell";
     [self sendImages];
 }
 
-- (NSInteger)seletedPhotosNumberInPhotoBrowser:(SGTPhotoBrowser *)photoBrowser
+- (NSInteger)seletedPhotosNumberInPhotoBrowser:(SGTPhotoPickerBrowser *)photoBrowser
 {
     return self.selectedAssetsArray.count;
 }
 
-- (BOOL)photoBrowser:(SGTPhotoBrowser *)photoBrowser currentPhotoAssetIsSeleted:(SGTImageAsset *)asset{
+- (BOOL)photoBrowser:(SGTPhotoPickerBrowser *)photoBrowser currentPhotoAssetIsSeleted:(SGTImageAsset *)asset{
     return [self assetIsSelected:asset];
 }
 
-- (BOOL)photoBrowser:(SGTPhotoBrowser *)photoBrowser seletedAsset:(SGTImageAsset *)asset
+- (BOOL)photoBrowser:(SGTPhotoPickerBrowser *)photoBrowser seletedAsset:(SGTImageAsset *)asset
 {
     BOOL seleted = [self seletedAssets:asset];
     [self.imageFlowCollectionView reloadData];
     return seleted;
 }
 
-- (void)photoBrowser:(SGTPhotoBrowser *)photoBrowser deseletedAsset:(SGTImageAsset *)asset
+- (void)photoBrowser:(SGTPhotoPickerBrowser *)photoBrowser deseletedAsset:(SGTImageAsset *)asset
 {
     [self deseletedAssets:asset];
     [self.imageFlowCollectionView reloadData];
 }
 
-- (void)photoBrowser:(SGTPhotoBrowser *)photoBrowser seleteFullImage:(BOOL)fullImage
+- (void)photoBrowser:(SGTPhotoPickerBrowser *)photoBrowser seleteFullImage:(BOOL)fullImage
 {
     self.isFullImage = fullImage;
 }

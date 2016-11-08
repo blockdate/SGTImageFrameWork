@@ -9,6 +9,8 @@
 #import "SGTSendButton.h"
 #import "UIView+DNImagePicker.h"
 #import "UIColor+Hex.h"
+#import "NSBundle+SGTCurrent.h"
+
 #define kSendButtonFont  [UIFont systemFontOfSize:15]
 static NSString *const dnSendButtonTintNormalColor = @"#1FB823";
 //static NSString *const dnSendButtonTintAbnormalColor = @"#C9DCCA";
@@ -29,10 +31,6 @@ static CGFloat const kSendButtonTextWitdh = 38.0f;
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.left = 0;
-        self.right = 0;
-        self.top = 0;
-        self.bottom = 0;
         self.width = 58;
         self.height = 26;
         [self setupViews];
@@ -58,11 +56,11 @@ static CGFloat const kSendButtonTextWitdh = 38.0f;
     
     _sendButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _sendButton.frame = CGRectMake(0, 0, self.width, self.height);
-    [_sendButton setTitle:NSLocalizedStringFromTable(@"send", @"DNImagePicker", @"发送")
+    [_sendButton setTitle:NSLocalizedStringFromTableInBundle(@"sure", @"DNImagePickerController", [NSBundle sgt_currentBundle], @"确定")
                  forState:UIControlStateNormal];
     [_sendButton setTitleColor:[UIColor hexStringToColor:dnSendButtonTintNormalColor] forState:UIControlStateNormal];
     [_sendButton setTitleColor:[UIColor hexStringToColor:dnSendButtonTintAbnormalColor] forState:UIControlStateHighlighted];
-    [_sendButton setTitleColor:[UIColor hexStringToColor:dnSendButtonTintAbnormalColor] forState:UIControlStateDisabled];
+    [_sendButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
     _sendButton.titleLabel.font = [UIFont systemFontOfSize:15.0f];
     _sendButton.contentEdgeInsets = UIEdgeInsetsMake(0, 20, 0, 0);
     _sendButton.backgroundColor = [UIColor clearColor];
@@ -71,6 +69,7 @@ static CGFloat const kSendButtonTextWitdh = 38.0f;
 
 - (void)setBadgeValue:(NSString *)badgeValue
 {
+    _badgeValue = badgeValue;
     CGRect rect = [badgeValue boundingRectWithSize:CGSizeMake(MAXFLOAT, 20) options:NSStringDrawingTruncatesLastVisibleLine attributes:@{NSFontAttributeName:kSendButtonFont} context:nil];
     self.badgeValueLabel.frame = CGRectMake(self.badgeValueLabel.left, self.badgeValueLabel.top, (rect.size.width + 9) > 20?(rect.size.width + 9):20, 20);
     self.backGroudView.width = self.badgeValueLabel.width;
@@ -78,14 +77,13 @@ static CGFloat const kSendButtonTextWitdh = 38.0f;
     
     self.sendButton.width = self.badgeValueLabel.width + kSendButtonTextWitdh;
     self.width = self.sendButton.width;
-    
+    NSLog(@"badge value %@", badgeValue);
     self.badgeValueLabel.text = badgeValue;
     
     if (badgeValue.integerValue > 0) {
         [self showBadgeValue];
-        self.backGroudView.transform =CGAffineTransformMakeScale(0, 0);
         [UIView animateWithDuration:0.2 animations:^{
-            self.backGroudView.transform = CGAffineTransformMakeScale(1.1, 1.1);
+            self.backGroudView.transform = CGAffineTransformMakeScale(1.2, 1.2);
         }
                          completion:^(BOOL finished){
                              [UIView animateWithDuration:0.1 animations:^{
@@ -102,6 +100,7 @@ static CGFloat const kSendButtonTextWitdh = 38.0f;
 {
     self.badgeValueLabel.hidden = NO;
     self.backGroudView.hidden = NO;
+    self.sendButton.enabled = YES;
 }
 
 - (void)hideBadgeValue
@@ -109,6 +108,7 @@ static CGFloat const kSendButtonTextWitdh = 38.0f;
     self.badgeValueLabel.hidden = YES;
     self.backGroudView.hidden = YES;
     self.sendButton.adjustsImageWhenDisabled = YES;
+    self.sendButton.enabled = NO;
 }
 
 

@@ -60,7 +60,6 @@
     
     if (title.integerValue > 0) {
         [self show];
-        self.backGroudView.transform =CGAffineTransformMakeScale(0, 0);
         [UIView animateWithDuration:0.2 animations:^{
             self.backGroudView.transform = CGAffineTransformMakeScale(1.1, 1.1);
         }

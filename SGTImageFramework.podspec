@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SGTImageFramework"
-  s.version      = "0.0.4"
+  s.version      = "0.0.6"
   s.summary      = "This is a private pod sp. provide image picker and viewer function"
 
   s.description  = <<-DESC
@@ -23,8 +23,10 @@ Pod::Spec.new do |s|
 
   s.source_files  = "Source/**/*.{h,m}"
 
-  s.public_header_files = "Source/SGTImagePicker/**/*.h", "Source/ImageBrowser/CorePhotoBroswerVC/**/*.h", "Source/SDWebImage/**/*.h"
-
+  s.public_header_files = "Source/SGTImagePicker/**/*.h",
+  "Source/ImageBrowser/CorePhotoBroswerVC/**/*.h",
+  "Source/Category/SDWebImage/**/*.h",
+  "Source/PhotoBrowser/Public/*.h"
   s.resources = 'Source/**/*.{png,pdf,xib,bundle,strings}'
 
   s.frameworks = "UIKit", "CoreGraphics"
@@ -32,7 +34,7 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  s.dependency 'Masonry', '~> 0.6.3'
-  s.dependency 'SDWebImage', '~> 3.7.3'
+  s.dependency 'Masonry'
+  s.dependency 'SDWebImage'
 
 end

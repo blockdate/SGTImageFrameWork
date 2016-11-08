@@ -8,6 +8,7 @@
 
 #import "SGTUnAuthorizedTipsView.h"
 #import "UIImage+Extend.h"
+#import "NSBundle+SGTCurrent.h"
 
 @implementation SGTUnAuthorizedTipsView
 
@@ -67,7 +68,7 @@
     if (_label == nil) {
         _label = [UILabel new];
         [_label setTranslatesAutoresizingMaskIntoConstraints:NO];
-        NSString *text = NSLocalizedStringFromTable(@"UnAuthorizedTip", @"DNImagePicker", @"UnAuthorizedTip");
+        NSString *text = NSLocalizedStringFromTableInBundle(@"UnAuthorizedTip", @"DNImagePickerController", [NSBundle sgt_currentBundle], @"UnAuthorizedTip");
         NSDictionary* infoDict =[[NSBundle mainBundle] infoDictionary];
         NSString*appName =[infoDict objectForKey:@"CFBundleDisplayName"]
         ;

@@ -33,6 +33,7 @@ UIKIT_EXTERN ALAssetsFilter * ALAssetsFilterFromDNImagePickerControllerFilterTyp
                     isFullImage:(BOOL)fullImage;
 
 - (void)dnImagePickerControllerDidCancel:(SGTImagePickerController *)imagePicker;
+
 @end
 
 
@@ -42,4 +43,5 @@ UIKIT_EXTERN ALAssetsFilter * ALAssetsFilterFromDNImagePickerControllerFilterTyp
 @property (nonatomic, assign) SGTImagePickerFilterType filterType;
 @property (nonatomic, weak) id<SGTImagePickerControllerDelegate> imagePickerDelegate;
 - (instancetype)initWithMaxCount:(NSInteger)maxCount;
+
 @end

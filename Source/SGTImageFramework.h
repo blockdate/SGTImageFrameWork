@@ -9,6 +9,6 @@
 #import "UIImage+Tool.h"
 #import "UIImageView+SD.h"
 #import "SGTImagePickerController.h"
-#import "SGTPhotoBrowser.h"
+#import "SGTPhotoPickerBrowser.h"
 #import "PhotoBroswerVC.h"
 #import "SGTImageAsset.h"
