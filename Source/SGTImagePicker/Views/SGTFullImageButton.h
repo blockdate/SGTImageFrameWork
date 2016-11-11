@@ -1,5 +1,5 @@
 //
-//  DNFullImageButton.h
+//  SGTFullImageButton.h
 //  ImagePicker
 //
 //  Created by block on 15/3/2.

@@ -1,5 +1,5 @@
 //
-//  DNPhotoBrowserViewController.h
+//  SGTPhotoPickerBrowser.h
 //  ImagePicker
 //
 //  Created by block on 15/2/28.

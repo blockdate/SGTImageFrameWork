@@ -1,5 +1,5 @@
 //
-//  DNSendButton.h
+//  SGTSendButton.h
 //  ImagePicker
 //
 //  Created by block on 15/2/24.

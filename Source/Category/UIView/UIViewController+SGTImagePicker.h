@@ -1,5 +1,5 @@
 //
-//  UIViewController+DNImagePicker.h
+//  UIViewController+SGTImagePicker.h
 //  ImagePicker
 //
 //  Created by block on 15/2/10.
@@ -13,7 +13,7 @@ typedef NS_ENUM(NSInteger, SGTImagePickerNavigationBarPosition) {
 };
 
 
-@interface UIViewController (DNImagePicker)
+@interface UIViewController (SGTImagePicker)
 
 /**
  *  根据image创建导航栏左右item

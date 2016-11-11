@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		600EAC4B1DD2C8BB00B5A33E /* SGTImageFramework.strings in Resources */ = {isa = PBXBuildFile; fileRef = 600EAC481DD2C8BB00B5A33E /* SGTImageFramework.strings */; };
 		60167F531DD0834700907F12 /* photo1l.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60167F4B1DD0834700907F12 /* photo1l.jpg */; };
 		60167F541DD0834700907F12 /* photo1m.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60167F4C1DD0834700907F12 /* photo1m.jpg */; };
 		60167F551DD0834700907F12 /* photo2l.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60167F4D1DD0834700907F12 /* photo2l.jpg */; };
@@ -24,7 +25,7 @@
 		602B0FE81DD01E6B005731F9 /* NSString+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B0F2C1DD01E6B005731F9 /* NSString+Extend.m */; };
 		602B0FE91DD01E6B005731F9 /* NSString+File.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B0F2E1DD01E6B005731F9 /* NSString+File.m */; };
 		602B0FEA1DD01E6B005731F9 /* NSString+Password.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B0F301DD01E6B005731F9 /* NSString+Password.m */; };
-		602B0FEB1DD01E6B005731F9 /* NSURL+DNIMagePickerUrlEqual.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B0F331DD01E6B005731F9 /* NSURL+DNIMagePickerUrlEqual.m */; };
+		602B0FEB1DD01E6B005731F9 /* NSURL+SGTIMagePickerUrlEqual.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B0F331DD01E6B005731F9 /* NSURL+SGTIMagePickerUrlEqual.m */; };
 		602B0FEC1DD01E6B005731F9 /* UIImage+ReMake.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B0F371DD01E6B005731F9 /* UIImage+ReMake.m */; };
 		602B0FED1DD01E6B005731F9 /* UIButton+SD.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B0F391DD01E6B005731F9 /* UIButton+SD.m */; };
 		602B0FEE1DD01E6B005731F9 /* UIImageView+SD.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B0F3B1DD01E6B005731F9 /* UIImageView+SD.m */; };
@@ -37,10 +38,10 @@
 		602B0FF51DD01E6B005731F9 /* UIImage+FixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B0F4D1DD01E6B005731F9 /* UIImage+FixOrientation.m */; };
 		602B0FF61DD01E6B005731F9 /* UIImage+Water.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B0F4F1DD01E6B005731F9 /* UIImage+Water.m */; };
 		602B0FF71DD01E6B005731F9 /* UITableViewCell+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B0F521DD01E6B005731F9 /* UITableViewCell+Extend.m */; };
-		602B0FF81DD01E6B005731F9 /* UIView+DNImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B0F551DD01E6B005731F9 /* UIView+DNImagePicker.m */; };
+		602B0FF81DD01E6B005731F9 /* UIView+SGTImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B0F551DD01E6B005731F9 /* UIView+SGTImagePicker.m */; };
 		602B0FF91DD01E6B005731F9 /* UIView+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B0F571DD01E6B005731F9 /* UIView+Extend.m */; };
 		602B0FFA1DD01E6B005731F9 /* UIView+PBExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B0F591DD01E6B005731F9 /* UIView+PBExtend.m */; };
-		602B0FFB1DD01E6B005731F9 /* UIViewController+DNImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B0F5B1DD01E6B005731F9 /* UIViewController+DNImagePicker.m */; };
+		602B0FFB1DD01E6B005731F9 /* UIViewController+SGTImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B0F5B1DD01E6B005731F9 /* UIViewController+SGTImagePicker.m */; };
 		602B0FFC1DD01E6B005731F9 /* UIWindow+Launch.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B0F5E1DD01E6B005731F9 /* UIWindow+Launch.m */; };
 		602B0FFD1DD01E6B005731F9 /* PBConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B0F641DD01E6B005731F9 /* PBConst.m */; };
 		602B0FFE1DD01E6B005731F9 /* PhotoBroswerLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B0F671DD01E6B005731F9 /* PhotoBroswerLayout.m */; };
@@ -74,7 +75,7 @@
 		602B101A1DD01E6B005731F9 /* SGTFilePhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B0FAD1DD01E6B005731F9 /* SGTFilePhoto.m */; };
 		602B101B1DD01E6B005731F9 /* SGTImagePhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B0FAF1DD01E6B005731F9 /* SGTImagePhoto.m */; };
 		602B101C1DD01E6B005731F9 /* SGTNetPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B0FB11DD01E6B005731F9 /* SGTNetPhoto.m */; };
-		602B10251DD01E6B005731F9 /* DNImagePickerController.strings in Resources */ = {isa = PBXBuildFile; fileRef = 602B0FBD1DD01E6B005731F9 /* DNImagePickerController.strings */; };
+		602B10251DD01E6B005731F9 /* SGTImagePickerController.strings in Resources */ = {isa = PBXBuildFile; fileRef = 602B0FBD1DD01E6B005731F9 /* SGTImagePickerController.strings */; };
 		602B10261DD01E6B005731F9 /* NSBundle+SGTCurrent.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B0FC11DD01E6B005731F9 /* NSBundle+SGTCurrent.m */; };
 		602B10271DD01E6B005731F9 /* SGTAlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B0FC31DD01E6B005731F9 /* SGTAlbumTableViewController.m */; };
 		602B10281DD01E6B005731F9 /* SGTImageAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B0FC51DD01E6B005731F9 /* SGTImageAsset.m */; };
@@ -91,7 +92,14 @@
 		602B10331DD01E6B005731F9 /* SGTSendButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B0FDB1DD01E6B005731F9 /* SGTSendButton.m */; };
 		602B10341DD01E6B005731F9 /* SGTUnAuthorizedTipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B0FDD1DD01E6B005731F9 /* SGTUnAuthorizedTipsView.m */; };
 		602B10351DD01E6B005731F9 /* UIImage+Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B0FE11DD01E6B005731F9 /* UIImage+Tool.m */; };
+		6050E1091DD1B06800B73EDC /* SGTPhotoPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6050E1081DD1B06800B73EDC /* SGTPhotoPickerController.m */; };
+		6050E10D1DD1BA5900B73EDC /* SGTAlbumListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6050E10C1DD1BA5900B73EDC /* SGTAlbumListViewController.m */; };
+		6050E1101DD1BA7500B73EDC /* SGTPhotoFlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6050E10F1DD1BA7500B73EDC /* SGTPhotoFlowViewController.m */; };
+		609085A51DD46367009B82DC /* SelectedPhotoGalleryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 609085A41DD46367009B82DC /* SelectedPhotoGalleryView.m */; };
+		609085A81DD468CC009B82DC /* SGTPhotoThumbCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 609085A71DD468CC009B82DC /* SGTPhotoThumbCollectionViewCell.m */; };
 		60DA10D11DCC6EB100F8C6D3 /* SGTNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60DA10D01DCC6EB100F8C6D3 /* SGTNavViewController.m */; };
+		60DDE7791DD3199D00380FF9 /* ImagePickerTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 60DDE7781DD3199D00380FF9 /* ImagePickerTitleButton.m */; };
+		60F5D4F71DD4054C00D93ACA /* SGTPhotoAssetViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F5D4F61DD4054C00D93ACA /* SGTPhotoAssetViewCell.m */; };
 		A4122E2B914E1813D58FB2A1 /* libPods-Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 186BE6978F9182455C8051D7 /* libPods-Demo.a */; };
 		E1999D341D58692E0097B960 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1999D331D58692E0097B960 /* main.m */; };
 		E1999D371D58692E0097B960 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1999D361D58692E0097B960 /* AppDelegate.m */; };
@@ -104,6 +112,8 @@
 /* Begin PBXFileReference section */
 		186BE6978F9182455C8051D7 /* libPods-Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DE77BE16EC912FDE55261B6 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		600EAC491DD2C8BB00B5A33E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SGTImageFramework.strings; sourceTree = "<group>"; };
+		600EAC4A1DD2C8BB00B5A33E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SGTImageFramework.strings"; sourceTree = "<group>"; };
 		60167F4B1DD0834700907F12 /* photo1l.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo1l.jpg; sourceTree = "<group>"; };
 		60167F4C1DD0834700907F12 /* photo1m.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo1m.jpg; sourceTree = "<group>"; };
 		60167F4D1DD0834700907F12 /* photo2l.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo2l.jpg; sourceTree = "<group>"; };
@@ -130,8 +140,8 @@
 		602B0F2E1DD01E6B005731F9 /* NSString+File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+File.m"; sourceTree = "<group>"; };
 		602B0F2F1DD01E6B005731F9 /* NSString+Password.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Password.h"; sourceTree = "<group>"; };
 		602B0F301DD01E6B005731F9 /* NSString+Password.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Password.m"; sourceTree = "<group>"; };
-		602B0F321DD01E6B005731F9 /* NSURL+DNIMagePickerUrlEqual.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+DNIMagePickerUrlEqual.h"; sourceTree = "<group>"; };
-		602B0F331DD01E6B005731F9 /* NSURL+DNIMagePickerUrlEqual.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+DNIMagePickerUrlEqual.m"; sourceTree = "<group>"; };
+		602B0F321DD01E6B005731F9 /* NSURL+SGTIMagePickerUrlEqual.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+SGTIMagePickerUrlEqual.h"; sourceTree = "<group>"; };
+		602B0F331DD01E6B005731F9 /* NSURL+SGTIMagePickerUrlEqual.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+SGTIMagePickerUrlEqual.m"; sourceTree = "<group>"; };
 		602B0F361DD01E6B005731F9 /* UIImage+ReMake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ReMake.h"; sourceTree = "<group>"; };
 		602B0F371DD01E6B005731F9 /* UIImage+ReMake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ReMake.m"; sourceTree = "<group>"; };
 		602B0F381DD01E6B005731F9 /* UIButton+SD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SD.h"; sourceTree = "<group>"; };
@@ -156,14 +166,14 @@
 		602B0F4F1DD01E6B005731F9 /* UIImage+Water.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Water.m"; sourceTree = "<group>"; };
 		602B0F511DD01E6B005731F9 /* UITableViewCell+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+Extend.h"; sourceTree = "<group>"; };
 		602B0F521DD01E6B005731F9 /* UITableViewCell+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+Extend.m"; sourceTree = "<group>"; };
-		602B0F541DD01E6B005731F9 /* UIView+DNImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DNImagePicker.h"; sourceTree = "<group>"; };
-		602B0F551DD01E6B005731F9 /* UIView+DNImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DNImagePicker.m"; sourceTree = "<group>"; };
+		602B0F541DD01E6B005731F9 /* UIView+SGTImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SGTImagePicker.h"; sourceTree = "<group>"; };
+		602B0F551DD01E6B005731F9 /* UIView+SGTImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SGTImagePicker.m"; sourceTree = "<group>"; };
 		602B0F561DD01E6B005731F9 /* UIView+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extend.h"; sourceTree = "<group>"; };
 		602B0F571DD01E6B005731F9 /* UIView+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extend.m"; sourceTree = "<group>"; };
 		602B0F581DD01E6B005731F9 /* UIView+PBExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+PBExtend.h"; sourceTree = "<group>"; };
 		602B0F591DD01E6B005731F9 /* UIView+PBExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PBExtend.m"; sourceTree = "<group>"; };
-		602B0F5A1DD01E6B005731F9 /* UIViewController+DNImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DNImagePicker.h"; sourceTree = "<group>"; };
-		602B0F5B1DD01E6B005731F9 /* UIViewController+DNImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DNImagePicker.m"; sourceTree = "<group>"; };
+		602B0F5A1DD01E6B005731F9 /* UIViewController+SGTImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SGTImagePicker.h"; sourceTree = "<group>"; };
+		602B0F5B1DD01E6B005731F9 /* UIViewController+SGTImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SGTImagePicker.m"; sourceTree = "<group>"; };
 		602B0F5D1DD01E6B005731F9 /* UIWindow+Launch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Launch.h"; sourceTree = "<group>"; };
 		602B0F5E1DD01E6B005731F9 /* UIWindow+Launch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Launch.m"; sourceTree = "<group>"; };
 		602B0F631DD01E6B005731F9 /* PBConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBConst.h; sourceTree = "<group>"; };
@@ -233,7 +243,7 @@
 		602B0FB01DD01E6B005731F9 /* SGTNetPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGTNetPhoto.h; sourceTree = "<group>"; };
 		602B0FB11DD01E6B005731F9 /* SGTNetPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGTNetPhoto.m; sourceTree = "<group>"; };
 		602B0FBB1DD01E6B005731F9 /* SGTImageFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGTImageFramework.h; sourceTree = "<group>"; };
-		602B0FBE1DD01E6B005731F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/DNImagePickerController.strings; sourceTree = "<group>"; };
+		602B0FBE1DD01E6B005731F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SGTImagePickerController.strings; sourceTree = "<group>"; };
 		602B0FC01DD01E6B005731F9 /* NSBundle+SGTCurrent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+SGTCurrent.h"; sourceTree = "<group>"; };
 		602B0FC11DD01E6B005731F9 /* NSBundle+SGTCurrent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+SGTCurrent.m"; sourceTree = "<group>"; };
 		602B0FC21DD01E6B005731F9 /* SGTAlbumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGTAlbumTableViewController.h; sourceTree = "<group>"; };
@@ -263,13 +273,28 @@
 		602B0FDB1DD01E6B005731F9 /* SGTSendButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGTSendButton.m; sourceTree = "<group>"; };
 		602B0FDC1DD01E6B005731F9 /* SGTUnAuthorizedTipsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGTUnAuthorizedTipsView.h; sourceTree = "<group>"; };
 		602B0FDD1DD01E6B005731F9 /* SGTUnAuthorizedTipsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGTUnAuthorizedTipsView.m; sourceTree = "<group>"; };
-		602B0FDE1DD01E6B005731F9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/DNImagePickerController.strings"; sourceTree = "<group>"; };
+		602B0FDE1DD01E6B005731F9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SGTImagePickerController.strings"; sourceTree = "<group>"; };
 		602B0FE01DD01E6B005731F9 /* UIImage+Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tool.h"; sourceTree = "<group>"; };
 		602B0FE11DD01E6B005731F9 /* UIImage+Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tool.m"; sourceTree = "<group>"; };
+		6050E1071DD1B06800B73EDC /* SGTPhotoPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGTPhotoPickerController.h; sourceTree = "<group>"; };
+		6050E1081DD1B06800B73EDC /* SGTPhotoPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGTPhotoPickerController.m; sourceTree = "<group>"; };
+		6050E10A1DD1B15800B73EDC /* SGTPhotoPickerControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGTPhotoPickerControllerDelegate.h; sourceTree = "<group>"; };
+		6050E10B1DD1BA5900B73EDC /* SGTAlbumListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGTAlbumListViewController.h; sourceTree = "<group>"; };
+		6050E10C1DD1BA5900B73EDC /* SGTAlbumListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGTAlbumListViewController.m; sourceTree = "<group>"; };
+		6050E10E1DD1BA7500B73EDC /* SGTPhotoFlowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGTPhotoFlowViewController.h; sourceTree = "<group>"; };
+		6050E10F1DD1BA7500B73EDC /* SGTPhotoFlowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGTPhotoFlowViewController.m; sourceTree = "<group>"; };
+		609085A31DD46367009B82DC /* SelectedPhotoGalleryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectedPhotoGalleryView.h; sourceTree = "<group>"; };
+		609085A41DD46367009B82DC /* SelectedPhotoGalleryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedPhotoGalleryView.m; sourceTree = "<group>"; };
+		609085A61DD468CC009B82DC /* SGTPhotoThumbCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGTPhotoThumbCollectionViewCell.h; sourceTree = "<group>"; };
+		609085A71DD468CC009B82DC /* SGTPhotoThumbCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGTPhotoThumbCollectionViewCell.m; sourceTree = "<group>"; };
 		60DA10CF1DCC6EB100F8C6D3 /* SGTNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGTNavViewController.h; sourceTree = "<group>"; };
 		60DA10D01DCC6EB100F8C6D3 /* SGTNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGTNavViewController.m; sourceTree = "<group>"; };
+		60DDE7771DD3199D00380FF9 /* ImagePickerTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerTitleButton.h; sourceTree = "<group>"; };
+		60DDE7781DD3199D00380FF9 /* ImagePickerTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerTitleButton.m; sourceTree = "<group>"; };
 		60ED99EA1DC08F370015FF19 /* SGTImageFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SGTImageFramework.framework; path = "../build/Debug-iphoneos/SGTImageFramework.framework"; sourceTree = "<group>"; };
 		60ED99EC1DC08FC80015FF19 /* SGTImageFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SGTImageFramework.framework; path = "../../../../Library/Developer/Xcode/DerivedData/SGTImageFramework-bmqbpezxljwvnaeqpcxevordgcnw/Build/Products/Debug-iphonesimulator/SGTImageFramework.framework"; sourceTree = "<group>"; };
+		60F5D4F51DD4054C00D93ACA /* SGTPhotoAssetViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGTPhotoAssetViewCell.h; sourceTree = "<group>"; };
+		60F5D4F61DD4054C00D93ACA /* SGTPhotoAssetViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGTPhotoAssetViewCell.m; sourceTree = "<group>"; };
 		9F3D8045423212F7866E29E8 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		E1999D2F1D58692E0097B960 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1999D331D58692E0097B960 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -305,6 +330,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		600EAC471DD2C8BB00B5A33E /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				600EAC481DD2C8BB00B5A33E /* SGTImageFramework.strings */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		60167F4A1DD0834700907F12 /* Photos */ = {
 			isa = PBXGroup;
 			children = (
@@ -324,9 +357,11 @@
 		602B0F171DD01E6B005731F9 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				600EAC471DD2C8BB00B5A33E /* Resource */,
 				602B0F181DD01E6B005731F9 /* Category */,
 				602B0F5F1DD01E6B005731F9 /* ImageBrowser */,
 				602B0F941DD01E6B005731F9 /* PhotoBrowser */,
+				6050E1021DD1AFA400B73EDC /* PhotoPicker */,
 				602B0FBB1DD01E6B005731F9 /* SGTImageFramework.h */,
 				602B0FBC1DD01E6B005731F9 /* SGTImagePicker */,
 				602B0FDF1DD01E6B005731F9 /* UIImage */,
@@ -420,8 +455,8 @@
 		602B0F311DD01E6B005731F9 /* NSURL */ = {
 			isa = PBXGroup;
 			children = (
-				602B0F321DD01E6B005731F9 /* NSURL+DNIMagePickerUrlEqual.h */,
-				602B0F331DD01E6B005731F9 /* NSURL+DNIMagePickerUrlEqual.m */,
+				602B0F321DD01E6B005731F9 /* NSURL+SGTIMagePickerUrlEqual.h */,
+				602B0F331DD01E6B005731F9 /* NSURL+SGTIMagePickerUrlEqual.m */,
 			);
 			path = NSURL;
 			sourceTree = "<group>";
@@ -503,14 +538,14 @@
 		602B0F531DD01E6B005731F9 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
-				602B0F541DD01E6B005731F9 /* UIView+DNImagePicker.h */,
-				602B0F551DD01E6B005731F9 /* UIView+DNImagePicker.m */,
+				602B0F541DD01E6B005731F9 /* UIView+SGTImagePicker.h */,
+				602B0F551DD01E6B005731F9 /* UIView+SGTImagePicker.m */,
 				602B0F561DD01E6B005731F9 /* UIView+Extend.h */,
 				602B0F571DD01E6B005731F9 /* UIView+Extend.m */,
 				602B0F581DD01E6B005731F9 /* UIView+PBExtend.h */,
 				602B0F591DD01E6B005731F9 /* UIView+PBExtend.m */,
-				602B0F5A1DD01E6B005731F9 /* UIViewController+DNImagePicker.h */,
-				602B0F5B1DD01E6B005731F9 /* UIViewController+DNImagePicker.m */,
+				602B0F5A1DD01E6B005731F9 /* UIViewController+SGTImagePicker.h */,
+				602B0F5B1DD01E6B005731F9 /* UIViewController+SGTImagePicker.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -727,7 +762,7 @@
 		602B0FBC1DD01E6B005731F9 /* SGTImagePicker */ = {
 			isa = PBXGroup;
 			children = (
-				602B0FBD1DD01E6B005731F9 /* DNImagePickerController.strings */,
+				602B0FBD1DD01E6B005731F9 /* SGTImagePickerController.strings */,
 				602B0FBF1DD01E6B005731F9 /* Private */,
 				602B0FC21DD01E6B005731F9 /* SGTAlbumTableViewController.h */,
 				602B0FC31DD01E6B005731F9 /* SGTAlbumTableViewController.m */,
@@ -784,6 +819,36 @@
 				602B0FE11DD01E6B005731F9 /* UIImage+Tool.m */,
 			);
 			path = UIImage;
+			sourceTree = "<group>";
+		};
+		6050E1021DD1AFA400B73EDC /* PhotoPicker */ = {
+			isa = PBXGroup;
+			children = (
+				6050E1061DD1B06800B73EDC /* Public */,
+				60DDE7771DD3199D00380FF9 /* ImagePickerTitleButton.h */,
+				60DDE7781DD3199D00380FF9 /* ImagePickerTitleButton.m */,
+				60F5D4F51DD4054C00D93ACA /* SGTPhotoAssetViewCell.h */,
+				60F5D4F61DD4054C00D93ACA /* SGTPhotoAssetViewCell.m */,
+				609085A31DD46367009B82DC /* SelectedPhotoGalleryView.h */,
+				609085A41DD46367009B82DC /* SelectedPhotoGalleryView.m */,
+				609085A61DD468CC009B82DC /* SGTPhotoThumbCollectionViewCell.h */,
+				609085A71DD468CC009B82DC /* SGTPhotoThumbCollectionViewCell.m */,
+			);
+			path = PhotoPicker;
+			sourceTree = "<group>";
+		};
+		6050E1061DD1B06800B73EDC /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				6050E1071DD1B06800B73EDC /* SGTPhotoPickerController.h */,
+				6050E1081DD1B06800B73EDC /* SGTPhotoPickerController.m */,
+				6050E10A1DD1B15800B73EDC /* SGTPhotoPickerControllerDelegate.h */,
+				6050E10B1DD1BA5900B73EDC /* SGTAlbumListViewController.h */,
+				6050E10C1DD1BA5900B73EDC /* SGTAlbumListViewController.m */,
+				6050E10E1DD1BA7500B73EDC /* SGTPhotoFlowViewController.h */,
+				6050E10F1DD1BA7500B73EDC /* SGTPhotoFlowViewController.m */,
+			);
+			path = Public;
 			sourceTree = "<group>";
 		};
 		E1999D261D58692E0097B960 = {
@@ -875,6 +940,7 @@
 				TargetAttributes = {
 					E1999D2E1D58692E0097B960 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = WCLWZ78UQ4;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -916,8 +982,9 @@
 				60167F541DD0834700907F12 /* photo1m.jpg in Resources */,
 				E1999D3F1D58692E0097B960 /* Assets.xcassets in Resources */,
 				E1999D3D1D58692E0097B960 /* Main.storyboard in Resources */,
-				602B10251DD01E6B005731F9 /* DNImagePickerController.strings in Resources */,
+				602B10251DD01E6B005731F9 /* SGTImagePickerController.strings in Resources */,
 				602B10091DD01E6B005731F9 /* PhotoBroswerVC.xib in Resources */,
+				600EAC4B1DD2C8BB00B5A33E /* SGTImageFramework.strings in Resources */,
 				602B10001DD01E6B005731F9 /* PB.bundle in Resources */,
 				60167F561DD0834700907F12 /* photo2m.jpg in Resources */,
 				60167F591DD0834700907F12 /* photo4l.jpg in Resources */,
@@ -980,13 +1047,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				602B0FE31DD01E6B005731F9 /* CALayer+Anim.m in Sources */,
+				60DDE7791DD3199D00380FF9 /* ImagePickerTitleButton.m in Sources */,
 				602B100A1DD01E6B005731F9 /* CoreArchive.m in Sources */,
 				602B0FFE1DD01E6B005731F9 /* PhotoBroswerLayout.m in Sources */,
 				602B0FF41DD01E6B005731F9 /* UIImage+Extend.m in Sources */,
 				602B10101DD01E6B005731F9 /* LFRoundProgressView.m in Sources */,
-				602B0FEB1DD01E6B005731F9 /* NSURL+DNIMagePickerUrlEqual.m in Sources */,
+				602B0FEB1DD01E6B005731F9 /* NSURL+SGTIMagePickerUrlEqual.m in Sources */,
 				602B0FE91DD01E6B005731F9 /* NSString+File.m in Sources */,
+				6050E1091DD1B06800B73EDC /* SGTPhotoPickerController.m in Sources */,
 				602B102D1DD01E6B005731F9 /* JKPromptView.m in Sources */,
+				609085A51DD46367009B82DC /* SelectedPhotoGalleryView.m in Sources */,
 				602B0FE81DD01E6B005731F9 /* NSString+Extend.m in Sources */,
 				602B0FF31DD01E6B005731F9 /* UIImage+Cut.m in Sources */,
 				602B0FED1DD01E6B005731F9 /* UIButton+SD.m in Sources */,
@@ -1000,6 +1070,9 @@
 				602B0FFF1DD01E6B005731F9 /* PhotoModel.m in Sources */,
 				602B102F1DD01E6B005731F9 /* SGTAssetsViewCell.m in Sources */,
 				602B0FF91DD01E6B005731F9 /* UIView+Extend.m in Sources */,
+				60F5D4F71DD4054C00D93ACA /* SGTPhotoAssetViewCell.m in Sources */,
+				6050E1101DD1BA7500B73EDC /* SGTPhotoFlowViewController.m in Sources */,
+				609085A81DD468CC009B82DC /* SGTPhotoThumbCollectionViewCell.m in Sources */,
 				602B101A1DD01E6B005731F9 /* SGTFilePhoto.m in Sources */,
 				602B10321DD01E6B005731F9 /* SGTFullImageButton.m in Sources */,
 				602B10161DD01E6B005731F9 /* SGTTapDetectingImageView.m in Sources */,
@@ -1022,6 +1095,7 @@
 				602B10171DD01E6B005731F9 /* SGTTapDetectingView.m in Sources */,
 				602B10261DD01E6B005731F9 /* NSBundle+SGTCurrent.m in Sources */,
 				602B10271DD01E6B005731F9 /* SGTAlbumTableViewController.m in Sources */,
+				6050E10D1DD1BA5900B73EDC /* SGTAlbumListViewController.m in Sources */,
 				602B0FE71DD01E6B005731F9 /* NSObject+Extend.m in Sources */,
 				602B0FF61DD01E6B005731F9 /* UIImage+Water.m in Sources */,
 				602B10041DD01E6B005731F9 /* PBScrollView.m in Sources */,
@@ -1032,7 +1106,7 @@
 				602B100D1DD01E6B005731F9 /* SVIndefiniteAnimatedView.m in Sources */,
 				602B102C1DD01E6B005731F9 /* SGTPhotoPickerBrowser.m in Sources */,
 				602B100F1DD01E6B005731F9 /* SVProgressHUD.m in Sources */,
-				602B0FF81DD01E6B005731F9 /* UIView+DNImagePicker.m in Sources */,
+				602B0FF81DD01E6B005731F9 /* UIView+SGTImagePicker.m in Sources */,
 				602B102E1DD01E6B005731F9 /* MWTapDetectingImageView.m in Sources */,
 				602B102B1DD01E6B005731F9 /* SGTImagePickerController.m in Sources */,
 				602B0FEF1DD01E6B005731F9 /* UIColor+Hex.m in Sources */,
@@ -1044,7 +1118,7 @@
 				E1999D341D58692E0097B960 /* main.m in Sources */,
 				602B10181DD01E6B005731F9 /* SGTZoomingScrollView.m in Sources */,
 				602B0FFD1DD01E6B005731F9 /* PBConst.m in Sources */,
-				602B0FFB1DD01E6B005731F9 /* UIViewController+DNImagePicker.m in Sources */,
+				602B0FFB1DD01E6B005731F9 /* UIViewController+SGTImagePicker.m in Sources */,
 				602B10051DD01E6B005731F9 /* PhotoImageView.m in Sources */,
 				602B10061DD01E6B005731F9 /* PhotoItemView.m in Sources */,
 				602B10191DD01E6B005731F9 /* SGTAssetPhoto.m in Sources */,
@@ -1058,13 +1132,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		602B0FBD1DD01E6B005731F9 /* DNImagePickerController.strings */ = {
+		600EAC481DD2C8BB00B5A33E /* SGTImageFramework.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				600EAC491DD2C8BB00B5A33E /* en */,
+				600EAC4A1DD2C8BB00B5A33E /* zh-Hans */,
+			);
+			name = SGTImageFramework.strings;
+			sourceTree = "<group>";
+		};
+		602B0FBD1DD01E6B005731F9 /* SGTImagePickerController.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				602B0FBE1DD01E6B005731F9 /* en */,
 				602B0FDE1DD01E6B005731F9 /* zh-Hans */,
 			);
-			name = DNImagePickerController.strings;
+			name = SGTImagePickerController.strings;
 			sourceTree = "<group>";
 		};
 		E1999D3B1D58692E0097B960 /* Main.storyboard */ = {
@@ -1179,12 +1262,16 @@
 			baseConfigurationReference = 5DE77BE16EC912FDE55261B6 /* Pods-Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Wenhua Zhang (2YH52UT436)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wenhua Zhang (2YH52UT436)";
+				DEVELOPMENT_TEAM = WCLWZ78UQ4;
 				INFOPLIST_FILE = Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = wleo.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = w.leo.test.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "750b04c2-ddba-465e-8840-7d2d52d70dab";
+				PROVISIONING_PROFILE_SPECIFIER = wleoTest_dev;
 			};
 			name = Debug;
 		};
@@ -1197,7 +1284,7 @@
 				INFOPLIST_FILE = Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = wleo.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = w.leo.test.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

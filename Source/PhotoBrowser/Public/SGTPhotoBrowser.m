@@ -15,6 +15,7 @@
 #import "SGTPhotoProtocol.h"
 #import "SGTZoomingScrollView.h"
 #import "SGTCaptionView.h"
+#import <Photos/PHImageManager.h>
 
 #define PAGE_INDEX_TAG_OFFSET   1000
 #define PAGE_INDEX(page)        ([(page) tag] - PAGE_INDEX_TAG_OFFSET)
@@ -681,6 +682,11 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
 }
 - (UIImage *)imageForPhoto:(id<SGTPhotoProtocol>)photo {
     if (photo) {
+        CGSize preferSize = PHImageManagerMaximumSize;//SGTCGSizeScale(self.view.bounds.size, [[UIScreen mainScreen] scale]);
+        if (photo.preferSize.width != preferSize.width || photo.preferSize.height != preferSize.height ) {
+            [photo unloadUnderlyingImage];
+            photo.preferSize = preferSize;
+        }
         // Get image or obtain in background
         if ([photo underlyingImage]) {
             return [photo underlyingImage];

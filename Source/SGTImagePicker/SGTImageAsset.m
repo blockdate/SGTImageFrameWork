@@ -1,5 +1,5 @@
 //
-//  DNAsset.m
+//  SGTImageAsset.m
 //  ImagePicker
 //
 //  Created by block on 15/3/6.
@@ -7,7 +7,7 @@
 //
 
 #import "SGTImageAsset.h"
-#import "NSURL+DNIMagePickerUrlEqual.h"
+#import "NSURL+SGTIMagePickerUrlEqual.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <CommonCrypto/CommonDigest.h>
 #import "UIImage+Extend.h"

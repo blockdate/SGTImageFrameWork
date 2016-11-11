@@ -1,15 +1,15 @@
 //
-//  UIViewController+DNImagePicker.m
+//  UIViewController+SGTImagePicker.m
 //  ImagePicker
 //
 //  Created by block on 15/2/10.
 //  Copyright (c) 2015年 dennis. All rights reserved.
 //
 
-#import "UIViewController+DNImagePicker.h"
+#import "UIViewController+SGTImagePicker.h"
 #import "UIColor+Hex.h"
 
-@implementation UIViewController (DNImagePicker)
+@implementation UIViewController (SGTImagePicker)
 - (void)createBarButtonItemAtPosition:(SGTImagePickerNavigationBarPosition)position statusNormalImage:(UIImage *)normalImage statusHighlightImage:(UIImage *)highlightImage action:(SEL)action {
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];

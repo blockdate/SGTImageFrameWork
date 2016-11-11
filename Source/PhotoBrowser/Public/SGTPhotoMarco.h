@@ -13,4 +13,7 @@
 
 extern const NSString *const SGT_Photo_loading_Finish_Notification;
 extern const int sgt_padding;
+
+CGSize SGTCGSizeScale(CGSize size, CGFloat scale);
+
 #endif

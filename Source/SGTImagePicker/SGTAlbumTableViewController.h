@@ -1,5 +1,5 @@
 //
-//  DNAlbumTableViewController.h
+//  SGTAlbumTableViewController.h
 //  ImagePicker
 //
 //  Created by block on 15/2/10.

@@ -1,5 +1,5 @@
 //
-//  DNAsset.h
+//  SGTImageAsset.h
 //  ImagePicker
 //
 //  Created by Block on 15/3/6.

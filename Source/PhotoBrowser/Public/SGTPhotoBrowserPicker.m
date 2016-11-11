@@ -48,6 +48,9 @@
 @synthesize customBar = _customBar,customEffectView=_customEffectView,currentIndexLabel=_currentIndexLabel,visiblePages=_visiblePages;
 
 #pragma mark - Object
+- (void)dealloc {
+    
+}
 - (instancetype)initWithSelectedPhotos:(NSArray<SGTPhotoSelectProtocol> *)photos {
     self = [super initWithPhotos:photos];
     if (self) {
@@ -57,6 +60,16 @@
     }
     return self;
 }
+- (instancetype)initWithSelectedPhotos:(NSArray<SGTPhotoSelectProtocol> *)photos animatedFromView:(UIView* _Nonnull)view{
+    self = [super initWithPhotos:photos animatedFromView:view];
+    if (self) {
+        _allPhotos = [NSMutableArray<SGTPhotoSelectProtocol> arrayWithArray:photos];
+        _selectPhotos = [NSMutableArray<SGTPhotoSelectProtocol> array];
+        self.disableVerticalSwipe = true;
+    }
+    return self;
+}
+
 #pragma mark - view lifrCycle
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -68,6 +81,15 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    if (self.hideBottomBar) {
+        self.customBottomBar.hidden = true;
+        [self.cancleButton setTitle:@"确定" forState:UIControlStateNormal];
+    }
+}
+
 #pragma mark - Control Hiding / Showing
 
 // If permanent then we don't set timers to hide again
@@ -130,15 +152,8 @@
     }else {
         [self.selectPhotos removeObject:photo];
     }
-    if (self.checkButton.selected) {
-//        if (self.delegate && [self.delegate respondsToSelector:@selector(photoBrowser:deseletedAsset:)]) {
-//            [self.delegate photoBrowser:self deseletedAsset:self.alloc[self.currentPageIndex]];
-//            self.checkButton.selected = NO;
-//        }
-    } else {
-//        if (self.delegate && [self.delegate respondsToSelector:@selector(photoBrowser:seletedAsset:)]) {
-//            self.checkButton.selected = [self.delegate photoBrowser:self seletedAsset:self.photoDataSources[self.currentPageIndex]];
-//        }
+    if ([self.photoPickdelegate respondsToSelector:@selector(sgtPhotoBrowserPickStatuChaned:atIndex:photo:)]) {
+        [self.photoPickdelegate sgtPhotoBrowserPickStatuChaned:self atIndex:self.currentPageIndex photo:photo];
     }
     
     [self updateSelestedNumber];

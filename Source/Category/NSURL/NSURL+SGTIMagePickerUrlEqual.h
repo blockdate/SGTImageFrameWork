@@ -1,5 +1,5 @@
 //
-//  NSURL+DNIMagePickerUrlEqual.h
+//  NSURL+SGTIMagePickerUrlEqual.h
 //  ImagePicker
 //
 //  Created by block on 15/3/6.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSURL (DNIMagePickerUrlEqual)
+@interface NSURL (SGTIMagePickerUrlEqual)
 
 - (BOOL)isEqualToOther:(NSURL *)aURL;
 

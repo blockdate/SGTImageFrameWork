@@ -15,4 +15,8 @@
 const NSString *const SGT_Photo_loading_Finish_Notification = @"SGT_Photo_loading_Finish_Notification";
 const int sgt_padding = 10;
 
+CGSize SGTCGSizeScale(CGSize size, CGFloat scale) {
+    return CGSizeMake(size.width * scale, size.height * scale);
+}
+
 #endif

@@ -13,6 +13,7 @@
 #import "SGTPhoto.h"
 #import "SGTPhotoBrowser.h"
 #import "SGTPhotoBrowserPicker.h"
+#import "SGTPhotoPickerController.h"
 
 @interface ViewController ()
 
@@ -60,7 +61,8 @@
         if (indexPath.row == 0) {
             [self test];
         }else if (indexPath.row == 1) {
-            
+            SGTPhotoPickerController *c = [[SGTPhotoPickerController alloc] initWithMaxPickCount:9];
+            [self presentViewController:c animated:true completion:nil];
         }else {
             
         }

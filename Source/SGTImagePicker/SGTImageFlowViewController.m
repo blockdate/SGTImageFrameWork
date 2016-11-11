@@ -1,5 +1,5 @@
 //
-//  DNImageFlowViewController.m
+//  SGTImageFlowViewController.m
 //  ImagePicker
 //
 //  Created by block on 15/2/11.
@@ -9,16 +9,17 @@
 #import "SGTImageFlowViewController.h"
 #import "SGTImagePickerController.h"
 #import "SGTPhotoPickerBrowser.h"
-#import "UIViewController+DNImagePicker.h"
-#import "UIView+DNImagePicker.h"
+#import "UIViewController+SGTImagePicker.h"
+#import "UIView+SGTImagePicker.h"
 #import "UIColor+Hex.h"
 #import "SGTAssetsViewCell.h"
 #import "SGTSendButton.h"
 #import "SGTImageAsset.h"
-#import "NSURL+DNIMagePickerUrlEqual.h"
+#import "NSURL+SGTIMagePickerUrlEqual.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "UIImage+Extend.h"
 #import "NSBundle+SGTCurrent.h"
+#import "SGTAssetPhoto.h"
 
 //static NSUInteger kDNImageFlowMaxSeletedNumber = 9;
 
@@ -38,7 +39,7 @@
 @property (nonatomic, assign) BOOL isFullImage;
 @end
 
-static NSString* const dnAssetsViewCellReuseIdentifier = @"DNAssetsViewCell";
+static NSString* const dnAssetsViewCellReuseIdentifier = @"SGTAssetsViewCell";
 
 @implementation SGTImageFlowViewController
 
@@ -67,7 +68,7 @@ static NSString* const dnAssetsViewCellReuseIdentifier = @"DNAssetsViewCell";
 
 - (void)dealloc
 {
-    NSLog(@"%s DNImageFlowViewController",__FUNCTION__);
+    NSLog(@"%s SGTImageFlowViewController",__FUNCTION__);
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -111,12 +112,12 @@ static NSString* const dnAssetsViewCellReuseIdentifier = @"DNAssetsViewCell";
                    statusHighlightImage:[UIImage sgt_imageWithBundleName:@"SGTImagePickerBundle" imageName:@"back_highlight"]
                                  action:@selector(backButtonAction)];
     [self createBarButtonItemAtPosition:Right
-                                   text:NSLocalizedStringFromTableInBundle(@"cancel", @"DNImagePickerController", [NSBundle sgt_currentBundle], @"取消")
+                                   text:NSLocalizedStringFromTableInBundle(@"cancel", @"SGTImagePickerController", [NSBundle sgt_currentBundle], @"取消")
                                  action:@selector(cancelAction)];
     
     [self imageFlowCollectionView];
     
-    UIBarButtonItem *item1 = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"preview", @"DNImagePickerController", [NSBundle sgt_currentBundle], @"预览") style:UIBarButtonItemStylePlain target:self action:@selector(previewAction)];
+    UIBarButtonItem *item1 = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"preview", @"SGTImagePickerController", [NSBundle sgt_currentBundle], @"预览") style:UIBarButtonItemStylePlain target:self action:@selector(previewAction)];
     [item1 setTintColor:[UIColor blackColor]];
     item1.enabled = NO;
     
@@ -132,7 +133,7 @@ static NSString* const dnAssetsViewCellReuseIdentifier = @"DNAssetsViewCell";
 
 - (void)loadData
 {
-    [self.assetsGroup setAssetsFilter:ALAssetsFilterFromDNImagePickerControllerFilterType([[self dnImagePickerController] filterType])];
+    [self.assetsGroup setAssetsFilter:ALAssetsFilterFromDNImagePickerControllerFilterType([[self sgtImagePickerController] filterType])];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [self.assetsGroup enumerateAssetsWithOptions:NSEnumerationReverse usingBlock:^(ALAsset *result, NSUInteger index, BOOL *stop) {
@@ -154,7 +155,7 @@ static NSString* const dnAssetsViewCellReuseIdentifier = @"DNAssetsViewCell";
     [self.imageFlowCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:rows inSection:0] atScrollPosition:UICollectionViewScrollPositionBottom animated:animated];
 }
 
-- (SGTImagePickerController *)dnImagePickerController
+- (SGTImagePickerController *)sgtImagePickerController
 {
     
     if (nil == self.navigationController
@@ -194,7 +195,6 @@ static NSString* const dnAssetsViewCellReuseIdentifier = @"DNAssetsViewCell";
 {
     NSMutableArray *seletedArray = [NSMutableArray new];
     for (SGTImageAsset *asset in self.selectedAssetsArray) {
-//        DNAsset *dnasset = [self dnassetFromALAsset:asset];
         [seletedArray addObject:asset];
     }
     return seletedArray;
@@ -209,7 +209,7 @@ static NSString* const dnAssetsViewCellReuseIdentifier = @"DNAssetsViewCell";
     
     [SGTImageAsset setSharedLibrary:_assetsLibrary];
     
-    SGTImagePickerController *imagePicker = [self dnImagePickerController];
+    SGTImagePickerController *imagePicker = [self sgtImagePickerController];
     if (imagePicker && [imagePicker.imagePickerDelegate respondsToSelector:@selector(dnImagePickerController:sendImages:isFullImage:)]) {
         [imagePicker.imagePickerDelegate dnImagePickerController:imagePicker sendImages:[self seletedDNAssetArray] isFullImage:self.isFullImage];
     }
@@ -234,7 +234,7 @@ static NSString* const dnAssetsViewCellReuseIdentifier = @"DNAssetsViewCell";
     UIBarButtonItem *firstItem = self.toolbarItems.firstObject;
     firstItem.enabled = YES;
     if (self.selectedAssetsArray.count >= _kDNImageFlowMaxSeletedNumber) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"alertTitle", @"DNImagePickerController", [NSBundle sgt_currentBundle], nil) message:[NSString stringWithFormat:@"图片最多允许选择%@张",@(_kDNImageFlowMaxSeletedNumber)] delegate:self cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"alertTitle", @"SGTImagePickerController", [NSBundle sgt_currentBundle], nil) message:[NSString stringWithFormat:@"图片最多允许选择%@张",@(_kDNImageFlowMaxSeletedNumber)] delegate:self cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
         [alert show];
         
         return NO;
@@ -316,7 +316,7 @@ static NSString* const dnAssetsViewCellReuseIdentifier = @"DNAssetsViewCell";
 
 - (void)cancelAction
 {
-    SGTImagePickerController *navController = [self dnImagePickerController];
+    SGTImagePickerController *navController = [self sgtImagePickerController];
     if (navController && [navController.imagePickerDelegate respondsToSelector:@selector(dnImagePickerControllerDidCancel:)]) {
         [navController.imagePickerDelegate dnImagePickerControllerDidCancel:navController];
     }
@@ -326,7 +326,7 @@ static NSString* const dnAssetsViewCellReuseIdentifier = @"DNAssetsViewCell";
     }
 }
 
-#pragma mark - DNAssetsViewCellDelegate
+#pragma mark - SGTAssetsViewCellDelegate
 - (void)didSelectItemAssetsViewCell:(SGTAssetsViewCell *)assetsCell
 {
     assetsCell.isSelected = [self seletedAssets:assetsCell.asset];
@@ -371,7 +371,7 @@ static NSString* const dnAssetsViewCellReuseIdentifier = @"DNAssetsViewCell";
     return UIEdgeInsetsMake(2, 2, 2, 2);
 }
 
-#pragma mark - DNPhotoBrowserDelegate
+#pragma mark - SGTPhotoBrowserDelegate
 - (void)sendImagesFromPhotobrowser:(SGTPhotoPickerBrowser *)photoBrowser currentAsset:(SGTImageAsset *)asset
 {
     if (self.selectedAssetsArray.count <= 0) {

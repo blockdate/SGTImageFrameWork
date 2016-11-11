@@ -1,5 +1,5 @@
 //
-//  DNBrowserCell.m
+//  SGTBrowserCell.m
 //  ImagePicker
 //
 //  Created by block on 15/2/28.

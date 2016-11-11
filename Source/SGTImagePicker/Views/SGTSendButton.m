@@ -1,5 +1,5 @@
 //
-//  DNSendButton.m
+//  SGTSendButton.m
 //  ImagePicker
 //
 //  Created by block on 15/2/24.
@@ -7,7 +7,7 @@
 //
 
 #import "SGTSendButton.h"
-#import "UIView+DNImagePicker.h"
+#import "UIView+SGTImagePicker.h"
 #import "UIColor+Hex.h"
 #import "NSBundle+SGTCurrent.h"
 
@@ -56,7 +56,7 @@ static CGFloat const kSendButtonTextWitdh = 38.0f;
     
     _sendButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _sendButton.frame = CGRectMake(0, 0, self.width, self.height);
-    [_sendButton setTitle:NSLocalizedStringFromTableInBundle(@"sure", @"DNImagePickerController", [NSBundle sgt_currentBundle], @"确定")
+    [_sendButton setTitle:NSLocalizedStringFromTableInBundle(@"sure", @"SGTImagePickerController", [NSBundle sgt_currentBundle], @"确定")
                  forState:UIControlStateNormal];
     [_sendButton setTitleColor:[UIColor hexStringToColor:dnSendButtonTintNormalColor] forState:UIControlStateNormal];
     [_sendButton setTitleColor:[UIColor hexStringToColor:dnSendButtonTintAbnormalColor] forState:UIControlStateHighlighted];

@@ -1,5 +1,5 @@
 //
-//  DNPhotoBrowserViewController.m
+//  SGTPhotoPickerBrowser.m
 //  ImagePicker
 //
 //  Created by block on 15/2/28.
@@ -7,8 +7,8 @@
 //
 
 #import "SGTPhotoPickerBrowser.h"
-#import "UIViewController+DNImagePicker.h"
-#import "UIView+DNImagePicker.h"
+#import "UIViewController+SGTImagePicker.h"
+#import "UIView+SGTImagePicker.h"
 #import "SGTSendButton.h"
 #import "SGTFullImageButton.h"
 #import "SGTBrowserCell.h"

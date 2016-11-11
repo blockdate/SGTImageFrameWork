@@ -1,5 +1,5 @@
 //
-//  UIView+DNImagePicker.h
+//  UIView+SGTImagePicker.h
 //  JKImagePicker
 //
 //  Created by block on 15/2/11.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (DNImagePicker)
+@interface UIView (SGTImagePicker)
 
 @property (nonatomic) CGFloat left;
 @property (nonatomic) CGFloat top;

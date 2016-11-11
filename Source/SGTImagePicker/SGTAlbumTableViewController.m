@@ -1,5 +1,5 @@
 //
-//  DNAlbumTableViewController.m
+//  SGTAlbumTableViewController.m
 //  ImagePicker
 //
 //  Created by block on 15/2/10.
@@ -10,11 +10,11 @@
 #import "SGTAlbumTableViewController.h"
 #import "SGTImagePickerController.h"
 #import "SGTImageFlowViewController.h"
-#import "UIViewController+DNImagePicker.h"
+#import "UIViewController+SGTImagePicker.h"
 #import "SGTUnAuthorizedTipsView.h"
 #import "NSBundle+SGTCurrent.h"
 
-static NSString* const dnalbumTableViewCellReuseIdentifier = @"dnalbumTableViewCellReuseIdentifier";
+static NSString* const sgtalbumTableViewCellReuseIdentifier = @"sgtalbumTableViewCellReuseIdentifier";
 
 @interface SGTAlbumTableViewController ()
 @property (nonatomic, strong) ALAssetsLibrary *assetsLibrary;
@@ -41,7 +41,7 @@ static NSString* const dnalbumTableViewCellReuseIdentifier = @"dnalbumTableViewC
 
 - (void)dealloc
 {
-    NSLog(@"%s DNAlbumTableViewController",__FUNCTION__);
+    NSLog(@"%s SGTAlbumTableViewController",__FUNCTION__);
 }
 
 #pragma mark - mark setup Data and View
@@ -64,12 +64,12 @@ static NSString* const dnalbumTableViewCellReuseIdentifier = @"dnalbumTableViewC
 
 - (void)setupView
 {
-    self.title = NSLocalizedStringFromTableInBundle(@"albumTitle", @"DNImagePickerController",[NSBundle sgt_currentBundle], @"photos");
+    self.title = NSLocalizedStringFromTableInBundle(@"albumTitle", @"SGTImagePickerController",[NSBundle sgt_currentBundle], @"photos");
     [self createBarButtonItemAtPosition:Right
-                                   text:NSLocalizedStringFromTableInBundle(@"cancel", @"DNImagePickerController",[NSBundle sgt_currentBundle], @"取消")
+                                   text:NSLocalizedStringFromTableInBundle(@"cancel", @"SGTImagePickerController",[NSBundle sgt_currentBundle], @"取消")
                                  action:@selector(cancelAction:)];
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:dnalbumTableViewCellReuseIdentifier];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:sgtalbumTableViewCellReuseIdentifier];
     UIView *view = [[UIView alloc] initWithFrame:CGRectZero];
     self.tableView.tableFooterView = view;
 }
@@ -78,7 +78,7 @@ static NSString* const dnalbumTableViewCellReuseIdentifier = @"dnalbumTableViewC
 #pragma mark - ui actions
 - (void)cancelAction:(id)sender
 {
-    SGTImagePickerController *navController = [self dnImagePickerController];
+    SGTImagePickerController *navController = [self sgtImagePickerController];
     if (navController && [navController.imagePickerDelegate respondsToSelector:@selector(dnImagePickerControllerDidCancel:)]) {
         [navController.imagePickerDelegate dnImagePickerControllerDidCancel:navController];
     }
@@ -96,7 +96,7 @@ static NSString* const dnalbumTableViewCellReuseIdentifier = @"dnalbumTableViewC
     return _assetsLibrary;
 }
 
-- (SGTImagePickerController *)dnImagePickerController
+- (SGTImagePickerController *)sgtImagePickerController
 {
     
     if (nil == self.navigationController
@@ -141,7 +141,7 @@ static NSString* const dnalbumTableViewCellReuseIdentifier = @"dnalbumTableViewC
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:dnalbumTableViewCellReuseIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:sgtalbumTableViewCellReuseIdentifier forIndexPath:indexPath];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     ALAssetsGroup *group = self.assetsGroups[indexPath.row];
     cell.textLabel.attributedText = [self albumTitle:group];
@@ -193,7 +193,7 @@ static NSString* const dnalbumTableViewCellReuseIdentifier = @"dnalbumTableViewC
              __strong typeof(weakSelf) strongSelf = weakSelf;
              if (assetsGroup) {
                  // Filter the assets group
-                 [assetsGroup setAssetsFilter:ALAssetsFilterFromDNImagePickerControllerFilterType([[strongSelf dnImagePickerController] filterType])];
+                 [assetsGroup setAssetsFilter:ALAssetsFilterFromDNImagePickerControllerFilterType([[strongSelf sgtImagePickerController] filterType])];
                  // Add assets group
                  if (assetsGroup.numberOfAssets > 0) {
                      // Add assets group

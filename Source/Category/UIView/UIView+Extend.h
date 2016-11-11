@@ -39,6 +39,12 @@ typedef enum{
 @property (nonatomic,assign) CGFloat radius;
 
 
+@property CGFloat top;
+@property CGFloat left;
+
+@property CGFloat bottom;
+@property CGFloat right;
+
 
 
 /**

@@ -1,5 +1,5 @@
 //
-//  DNImagePickerController.m
+//  SGTImagePickerController.m
 //  ImagePicker
 //
 //  Created by block on 15/2/10.

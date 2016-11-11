@@ -1,5 +1,5 @@
 //
-//  DNImageFlowViewController.h
+//  SGTImageFlowViewController.h
 //  ImagePicker
 //
 //  Created by block on 15/2/11.
@@ -13,4 +13,5 @@
 @property (nonatomic, assign) NSInteger kDNImageFlowMaxSeletedNumber;
 
 - (instancetype)initWithGroupURL:(NSURL *)assetsGroupURL;
+
 @end

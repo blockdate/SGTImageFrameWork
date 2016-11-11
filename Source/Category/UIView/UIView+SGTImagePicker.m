@@ -1,14 +1,14 @@
 //
-//  UIView+DNImagePicker.m
+//  UIView+SGTImagePicker.m
 //  JKImagePicker
 //
 //  Created by block on 15/2/11.
 //  Copyright (c) 2015年 block. All rights reserved.
 //
 
-#import "UIView+DNImagePicker.h"
+#import "UIView+SGTImagePicker.h"
 
-@implementation UIView (DNImagePicker)
+@implementation UIView (SGTImagePicker)
 
 - (CGFloat)left {
     return self.frame.origin.x;

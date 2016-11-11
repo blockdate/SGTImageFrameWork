@@ -207,7 +207,7 @@
 {
     if (_checkImageView == nil) {
         _checkImageView = [UIImageView new];
-        _checkImageView.contentMode = UIViewContentModeScaleAspectFit;
+        _checkImageView.contentMode = UIViewContentModeScaleAspectFill;
         [_checkImageView setTranslatesAutoresizingMaskIntoConstraints:NO];
         [self addSubview:_checkImageView];
     }

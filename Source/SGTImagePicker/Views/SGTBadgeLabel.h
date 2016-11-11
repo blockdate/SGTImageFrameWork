@@ -1,5 +1,5 @@
 //
-//  DNBadgeLabel.h
+//  SGTBadgeLabel.h
 //  ImagePicker
 //
 //  Created by block on 15/2/27.

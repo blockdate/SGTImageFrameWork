@@ -38,4 +38,9 @@
 @optional
 
 @end
+@class SGTPhotoBrowserPicker;
+
+@protocol SGTPhotoBrowserPickerDelegate <NSObject>
+- (void)sgtPhotoBrowserPickStatuChaned:(SGTPhotoBrowserPicker *_Nonnull)controller atIndex:(NSInteger)index photo:(id<SGTPhotoSelectProtocol>_Nonnull)photo;
+@end
 

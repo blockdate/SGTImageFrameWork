@@ -14,7 +14,9 @@
 #import "SGTAssetPhoto.h"
 
 @interface SGTPhoto()
+- (void)imageLoadingStarted;
 - (void)imageLoadingComplete;
+- (void)imageLoadCompleteWithNoNotify;
 @end
 
 @implementation SGTPhoto
@@ -96,11 +98,15 @@
 }
 
 - (void)loadUnderlyingImageAndNotify {
-    NSAssert([[NSThread currentThread] isMainThread], @"This method must be called on the main thread.");
-    _loadingInProgress = YES;
+    [self imageLoadingStarted];
+}
+
+- (void)loadUnderlyImageFinished:(void (^)(id<SGTPhotoProtocol> _Nonnull))finished {
+    
 }
 
 - (void)unloadUnderlyingImage {
+    NSLog(@"photo unload");
     self.loadingInProgress = false;
     self.underlyingImage = nil;
 }
@@ -115,11 +121,30 @@
 
 // Called on main
 - (void)imageLoadingComplete {
+    [self imageLoadCompleteWithNoNotify];
+    [[NSNotificationCenter defaultCenter] postNotificationName:[SGT_Photo_loading_Finish_Notification copy]
+                                                        object:self];
+}
+
+- (void)imageLoadCompleteWithNoNotify {
     NSAssert([[NSThread currentThread] isMainThread], @"This method must be called on the main thread.");
     // Complete so notify
     _loadingInProgress = NO;
-    [[NSNotificationCenter defaultCenter] postNotificationName:[SGT_Photo_loading_Finish_Notification copy]
-                                                        object:self];
+}
+
+- (void)imageLoadingStarted {
+    NSAssert([[NSThread currentThread] isMainThread], @"This method must be called on the main thread.");
+    // Complete so notify
+    _loadingInProgress = YES;
+}
+
+- (void)setIsSelect:(BOOL)isSelect {
+    if (_isSelect != isSelect) {
+        _isSelect = isSelect;
+        if ([_delegate respondsToSelector:@selector(sgtPhotoStatuChanged:)]) {
+            [_delegate sgtPhotoStatuChanged:self];
+        }
+    }
 }
 
 @end

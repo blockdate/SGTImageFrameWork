@@ -164,7 +164,54 @@
     return self.frame.origin;
 }
 
+- (CGFloat) top
+{
+    return self.frame.origin.y;
+}
 
+- (void) setTop: (CGFloat) newtop
+{
+    CGRect newframe = self.frame;
+    newframe.origin.y = newtop;
+    self.frame = newframe;
+}
+
+- (CGFloat) left
+{
+    return self.frame.origin.x;
+}
+
+- (void) setLeft: (CGFloat) newleft
+{
+    CGRect newframe = self.frame;
+    newframe.origin.x = newleft;
+    self.frame = newframe;
+}
+
+- (CGFloat) bottom
+{
+    return self.frame.origin.y + self.frame.size.height;
+}
+
+- (void) setBottom: (CGFloat) newbottom
+{
+    CGRect newframe = self.frame;
+    newframe.origin.y = newbottom - self.frame.size.height;
+    self.frame = newframe;
+}
+
+- (CGFloat) right
+{
+    return self.frame.origin.x + self.frame.size.width;
+}
+
+- (void) setRight: (CGFloat) newright
+{
+    CGFloat delta = newright - (self.frame.origin.x + self.frame.size.width);
+    CGRect newframe = self.frame;
+    newframe.origin.x += delta ;
+    self.frame = newframe;
+}
 
 #pragma mark  添加一组子view：
 -(void)addSubviewsWithArray:(NSArray *)subViews{

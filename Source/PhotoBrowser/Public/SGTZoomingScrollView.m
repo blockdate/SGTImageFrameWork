@@ -88,6 +88,7 @@
 }
 
 - (void)prepareForReuse {
+    [self.photo unloadUnderlyingImage];
     self.photo = nil;
     [self.captionView removeFromSuperview];
     self.captionView = nil;

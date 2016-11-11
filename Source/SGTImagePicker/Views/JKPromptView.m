@@ -7,7 +7,7 @@
 //
 
 #import "JKPromptView.h"
-#import "UIView+DNImagePicker.h"
+#import "UIView+SGTImagePicker.h"
 
 static JKPromptView *instancePrompt;
 

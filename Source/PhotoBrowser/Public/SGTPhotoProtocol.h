@@ -25,6 +25,8 @@
 
 @property (nonatomic, strong, nullable) UIImage *underlyingImage;
 
+@property (nonatomic) CGSize preferSize;
+
 - (NSUInteger)size;
 
 /**
@@ -47,6 +49,8 @@
                                                       object:self];
  */
 - (void)loadUnderlyingImageAndNotify;
+
+- (void)loadUnderlyImageFinished:(void(^_Nullable)(id<SGTPhotoProtocol> _Nonnull))finished;
 
 /**
  用于在视图控制器销毁时，护着内存告急时销毁释放图片
@@ -73,8 +77,17 @@
 
 @end
 
+@protocol SGTPhotoSelectProtocol;
+@protocol SGTPhotoSelectStatueChangeDelegate <NSObject>
+
+- (void)sgtPhotoStatuChanged:(id<SGTPhotoSelectProtocol> _Nonnull)photo;
+
+@end
+
 @protocol SGTPhotoSelectProtocol <SGTPhotoProtocol>
 
 @property (nonatomic) BOOL isSelect;
+
+@property (nonatomic, nullable, weak) id<SGTPhotoSelectStatueChangeDelegate> delegate;
 
 @end

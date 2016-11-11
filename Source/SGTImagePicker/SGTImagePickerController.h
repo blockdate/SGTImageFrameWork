@@ -1,5 +1,5 @@
 //
-//  DNImagePickerController.h
+//  SGTImagePickerController.h
 //  ImagePicker
 //
 //  Created by block on 15/2/10.
@@ -19,8 +19,11 @@ typedef NS_ENUM(NSUInteger, SGTImagePickerFilterType) {
 UIKIT_EXTERN ALAssetsFilter * ALAssetsFilterFromDNImagePickerControllerFilterType(SGTImagePickerFilterType type);
 
 @class SGTImagePickerController;
+
 @protocol SGTImagePickerControllerDelegate <NSObject>
+
 @optional
+
 /**
  *  imagePickerController‘s seleted photos
  *

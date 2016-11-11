@@ -1,14 +1,14 @@
 //
-//  NSURL+DNIMagePickerUrlEqual.m
+//  NSURL+SGTIMagePickerUrlEqual.m
 //  ImagePicker
 //
 //  Created by block on 15/3/6.
 //  Copyright (c) 2015年 block. All rights reserved.
 //
 
-#import "NSURL+DNIMagePickerUrlEqual.h"
+#import "NSURL+SGTIMagePickerUrlEqual.h"
 
-@implementation NSURL (DNIMagePickerUrlEqual)
+@implementation NSURL (SGTIMagePickerUrlEqual)
 
 - (BOOL)isEqualToOther:(NSURL *)aURL
 {

@@ -1,5 +1,5 @@
 //
-//  DNBadgeLabel.m
+//  SGTBadgeLabel.m
 //  ImagePicker
 //
 //  Created by block on 15/2/27.
@@ -8,7 +8,7 @@
 
 #import "SGTBadgeLabel.h"
 #import "UIColor+Hex.h"
-#import "UIView+DNImagePicker.h"
+#import "UIView+SGTImagePicker.h"
 
 @interface SGTBadgeLabel ()
 @property (nonatomic, strong) UIView *backGroudView;

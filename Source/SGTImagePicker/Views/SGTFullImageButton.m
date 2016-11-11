@@ -1,5 +1,5 @@
 //
-//  DNFullImageButton.m
+//  SGTFullImageButton.m
 //  ImagePicker
 //
 //  Created by block on 15/3/2.
@@ -7,7 +7,7 @@
 //
 
 #import "SGTFullImageButton.h"
-#import "UIView+DNImagePicker.h"
+#import "UIView+SGTImagePicker.h"
 #import "UIImage+Extend.h"
 #import "NSBundle+SGTCurrent.h"
 
@@ -63,7 +63,7 @@ static NSInteger const buttonImageWidth = 16;
         _fullImageButton.width = [self fullImageButtonWidth];
         _fullImageButton.height = 28;
         _fullImageButton.backgroundColor = [UIColor clearColor];
-        [_fullImageButton setTitle:NSLocalizedStringFromTableInBundle(@"fullImage", @"DNImagePickerController", [NSBundle sgt_currentBundle], @"原图") forState:UIControlStateNormal];
+        [_fullImageButton setTitle:NSLocalizedStringFromTableInBundle(@"fullImage", @"SGTImagePickerController", [NSBundle sgt_currentBundle], @"原图") forState:UIControlStateNormal];
         _fullImageButton.titleLabel.font = kDNFullImageButtonFont;
         [_fullImageButton setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
         [_fullImageButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
@@ -91,7 +91,7 @@ static NSInteger const buttonImageWidth = 16;
 
 - (CGFloat)fullImageButtonWidth
 {
-    NSString *string = NSLocalizedStringFromTableInBundle(@"fullImage", @"DNImagePickerController", [NSBundle sgt_currentBundle], @"原图");
+    NSString *string = NSLocalizedStringFromTableInBundle(@"fullImage", @"SGTImagePickerController", [NSBundle sgt_currentBundle], @"原图");
     CGRect rect = [string boundingRectWithSize:CGSizeMake(MAXFLOAT, 20) options:NSStringDrawingTruncatesLastVisibleLine attributes:@{NSFontAttributeName:kDNFullImageButtonFont} context:nil];
     CGFloat width = buttonImageWidth + buttonPadding + CGRectGetWidth(rect);
     return width;
