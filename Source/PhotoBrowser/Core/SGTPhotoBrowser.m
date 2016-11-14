@@ -711,7 +711,7 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
                 id <SGTPhotoProtocol> photo = [self photoAtIndex:pageIndex-1];
                 if (![photo underlyingImage]) {
                     [photo loadUnderlyingImageAndNotify];
-                    NSLog(@"Pre-loading image at index %lu", pageIndex-1);
+//                    NSLog(@"Pre-loading image at index %lu", pageIndex-1);
                 }
             }
             if (pageIndex < [self numberOfPhotos] - 1) {
@@ -719,7 +719,7 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
                 id <SGTPhotoProtocol> photo = [self photoAtIndex:pageIndex+1];
                 if (![photo underlyingImage]) {
                     [photo loadUnderlyingImageAndNotify];
-                    NSLog(@"Pre-loading image at index %lu", pageIndex+1);
+//                    NSLog(@"Pre-loading image at index %lu", pageIndex+1);
                 }
             }
         }
@@ -767,7 +767,7 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
             [_recycledPages addObject:page];
             [page prepareForReuse];
             [page removeFromSuperview];
-            NSLog(@"Removed page at index %li", PAGE_INDEX(page));
+//            NSLog(@"Removed page at index %li", PAGE_INDEX(page));
         }
     }
     [_visiblePages minusSet:_recycledPages];
@@ -786,7 +786,7 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
             [self configurePage:page forIndex:index];
             [_visiblePages addObject:page];
             [_pagingScrollView addSubview:page];
-            NSLog(@"Added page at index %lu", (unsigned long)index);
+//            NSLog(@"Added page at index %lu", (unsigned long)index);
             
             // Add caption
             SGTCaptionView *captionView = [self captionViewForPhotoAtIndex:index];

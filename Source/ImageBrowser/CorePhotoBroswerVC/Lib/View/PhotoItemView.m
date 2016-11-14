@@ -262,7 +262,7 @@
  */
 -(void)rota:(UIRotationGestureRecognizer *)rotaGesture{
     
-    NSLog(@"旋转");
+//    NSLog(@"旋转");
     self.photoImageView.transform = CGAffineTransformRotate(rotaGesture.view.transform, rotaGesture.rotation);
     rotaGesture.rotation = 0;
 }

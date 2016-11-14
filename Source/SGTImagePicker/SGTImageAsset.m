@@ -132,7 +132,7 @@ static ALAssetsLibrary* _sharedLibrary = nil;
         data = UIImagePNGRepresentation(self.image);
         long long imgsize = data.length;
         double scale = maxSize*1.0/imgsize;
-        NSLog(@"scale %lf",scale);
+//        NSLog(@"scale %lf",scale);
         data = UIImageJPEGRepresentation(self.image, scale>=1?0:scale);
 //        data = UIImagePNGRepresentation(self.image);
         
@@ -144,7 +144,7 @@ static ALAssetsLibrary* _sharedLibrary = nil;
         data = UIImagePNGRepresentation(img);
         long long imgsize = data.length;
         double scale = maxSize*1.0/imgsize;
-        NSLog(@"scale %lf",scale);
+//        NSLog(@"scale %lf",scale);
         data = UIImageJPEGRepresentation(img, scale>=1?1:scale);
         
         [data writeToFile:filePath atomically:true];

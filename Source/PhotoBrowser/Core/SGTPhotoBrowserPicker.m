@@ -163,7 +163,7 @@
     NSInteger selectedNumber = 0;
     selectedNumber = self.selectPhotos.count;
     NSString * s = [NSString stringWithFormat:@"%ld",selectedNumber];
-    NSLog(@"click");
+//    NSLog(@"click");
     self.sendButton.badgeValue = s;
 }
 

@@ -12,3 +12,6 @@
 #import "SGTPhotoPickerBrowser.h"
 #import "PhotoBroswerVC.h"
 #import "SGTImageAsset.h"
+#import "SGTPhotoPickerController.h"
+#import "SGTPhotoBrowser.h"
+#import "SGTPhotoBrowserPicker.h"

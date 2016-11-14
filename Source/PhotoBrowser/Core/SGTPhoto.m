@@ -106,7 +106,7 @@
 }
 
 - (void)unloadUnderlyingImage {
-    NSLog(@"photo unload");
+//    NSLog(@"photo unload");
     self.loadingInProgress = false;
     self.underlyingImage = nil;
 }

@@ -14,6 +14,7 @@
 #import "SGTPhotoBrowser.h"
 #import "SGTPhotoBrowserPicker.h"
 #import "SGTPhotoPickerController.h"
+#import "SGTImagePickerController.h"
 
 @interface ViewController ()
 
@@ -56,15 +57,14 @@
     
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        [self openLocalPhotoPicker];
+        if (indexPath.row == 0) {
+            [self openLocalPhotoPicker];
+        }else {
+            [self showPhotoPicker];
+        }
     }else if(indexPath.section == 1){
         if (indexPath.row == 0) {
-            [self test];
-        }else if (indexPath.row == 1) {
-            SGTPhotoPickerController *c = [[SGTPhotoPickerController alloc] initWithMaxPickCount:9];
-            [self presentViewController:c animated:true completion:nil];
-        }else {
-            
+            [self showPhotoBrowser];
         }
     }
     [tableView deselectRowAtIndexPath:indexPath animated:true];
@@ -75,7 +75,23 @@
     [self presentViewController:c animated:true completion:nil];
 }
 
-- (void)test {
+- (void)showPhotoPicker {
+    SGTPhotoPickerController *c = [[SGTPhotoPickerController alloc] initWithMaxPickCount:9];
+    [self presentViewController:c animated:true completion:nil];
+}
+- (void)showPhotoBrowser {
+    NSMutableArray<SGTPhotoSelectProtocol> *photos = [NSMutableArray<SGTPhotoSelectProtocol> new];
+    id<SGTPhotoSelectProtocol> photo = [SGTPhoto photoWithFilePath:[[NSBundle mainBundle] pathForResource:@"photo2l" ofType:@"jpg"]];
+    
+    [photos addObject:photo];
+    photo = [SGTPhoto photoWithURL:[NSURL URLWithString:@"http://farm4.static.flickr.com/3567/3523321514_371d9ac42f_b.jpg"]];
+    
+    [photos addObject:photo];
+    SGTPhotoBrowser *browser = [[SGTPhotoBrowser alloc] initWithPhotos:photos];
+    browser.forceHideStatusBar = NO;
+    [self presentViewController:browser animated:YES completion:nil];
+}
+- (void)showPhotoBrowserPicker {
     NSMutableArray<SGTPhotoSelectProtocol> *photos = [NSMutableArray<SGTPhotoSelectProtocol> new];
     id<SGTPhotoSelectProtocol> photo = [SGTPhoto photoWithFilePath:[[NSBundle mainBundle] pathForResource:@"photo2l" ofType:@"jpg"]];
     

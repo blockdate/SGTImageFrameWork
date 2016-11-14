@@ -77,7 +77,7 @@ static CGFloat const kSendButtonTextWitdh = 38.0f;
     
     self.sendButton.width = self.badgeValueLabel.width + kSendButtonTextWitdh;
     self.width = self.sendButton.width;
-    NSLog(@"badge value %@", badgeValue);
+//    NSLog(@"badge value %@", badgeValue);
     self.badgeValueLabel.text = badgeValue;
     
     if (badgeValue.integerValue > 0) {

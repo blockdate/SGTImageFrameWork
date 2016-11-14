@@ -105,7 +105,7 @@
     NSString *result= [PhotoModel check:photoModels type:type];
     
     if(result !=nil){
-        NSLog(@"%@",result);
+//        NSLog(@"%@",result);
         return;
     }
     
@@ -753,7 +753,7 @@
     
     if(isInScreen){
         
-        NSLog(@"currentItemView:%@",self.currentItemView);
+//        NSLog(@"currentItemView:%@",self.currentItemView);
         
         [self.currentItemView zoomDismiss:^{
             

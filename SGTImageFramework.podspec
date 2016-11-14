@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SGTImageFramework"
-  s.version      = "0.0.6"
+  s.version      = "0.0.5"
   s.summary      = "This is a private pod sp. provide image picker and viewer function"
 
   s.description  = <<-DESC
@@ -26,7 +26,9 @@ Pod::Spec.new do |s|
   s.public_header_files = "Source/SGTImagePicker/**/*.h",
   "Source/ImageBrowser/CorePhotoBroswerVC/**/*.h",
   "Source/Category/SDWebImage/**/*.h",
-  "Source/PhotoBrowser/Public/*.h"
+  "Source/PhotoBrowser/**/*.h",
+  "Source/PhotoPicker/Public/*.h"
+
   s.resources = 'Source/**/*.{png,pdf,xib,bundle,strings}'
 
   s.frameworks = "UIKit", "CoreGraphics"

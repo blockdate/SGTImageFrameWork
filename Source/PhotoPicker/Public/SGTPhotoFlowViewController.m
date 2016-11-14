@@ -350,12 +350,12 @@
     [self.selectedPhoto addObject:photo];
     [self.selectedPhotoGalleryView addPhoto:photo];
     [self updateBottomBar];
-    NSLog(@"photo added");
+//    NSLog(@"photo added");
 }
 
 - (void)removePhoto:(id<SGTPhotoSelectProtocol>)photo {
     if ([self.selectedPhoto containsObject:photo]) {
-        NSLog(@"photo removed");
+//        NSLog(@"photo removed");
         [self.selectedPhoto removeObject:photo];
         [self.selectedPhotoGalleryView removePhoto:photo];
         [self updateBottomBar];
