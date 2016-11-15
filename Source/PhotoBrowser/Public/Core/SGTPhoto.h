@@ -15,6 +15,7 @@
 typedef void (^SGTPhotoProgressUpdateBlock)(CGFloat progress);
 
 @property (nonatomic) CGSize preferSize;
+@property (nonatomic, nullable) NSString *preferFilePath;
 @property (nonatomic) BOOL isSelect;
 @property (nonatomic, strong, nullable) NSString *caption;
 @property (nonatomic, strong, nullable) SGTPhotoProgressUpdateBlock progressUpdateBlock;

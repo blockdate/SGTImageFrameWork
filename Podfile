@@ -13,6 +13,7 @@ target 'SGTImageFramework' do
     pod 'SDWebImage'
     pod 'DACircularProgress'
     pod 'pop'
+    pod 'MBProgressHUD'
 end
 
  target 'Demo' do
@@ -21,6 +22,7 @@ end
      pod 'Masonry'
      pod 'SDWebImage'
      pod 'DACircularProgress'
+     pod 'MBProgressHUD'
      pod 'pop'
      pod 'Reveal-iOS-SDK', :configurations => ['Debug']
  end

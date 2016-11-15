@@ -16,6 +16,7 @@
 #import "SGTZoomingScrollView.h"
 #import "SGTCaptionView.h"
 #import <Photos/PHImageManager.h>
+#import <MBProgressHUD/MBProgressHUD.h>
 
 #define PAGE_INDEX_TAG_OFFSET   1000
 #define PAGE_INDEX(page)        ([(page) tag] - PAGE_INDEX_TAG_OFFSET)
@@ -55,6 +56,7 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
     int _previousModalPresentationStyle;
     
     BOOL _originalNavgationBarHidden;
+    
 }
 //Navigation
 @property(nonatomic, nonnull, strong) UIView *customBar;
@@ -70,6 +72,7 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
 @property(nonatomic) NSUInteger currentPageIndex;
 
 // Actions
+@property (nonatomic) BOOL isSheetShow;
 @property(nonatomic, nullable, strong) UIActionSheet *actionsSheet;
 @property(nonatomic, nullable, strong) UIActivityViewController *activityViewController;
 
@@ -107,6 +110,8 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
         _animationDuration = 0.28;
         _senderViewForAnimation = nil;
         _scaleImage = nil;
+        
+        _isSheetShow = NO;
         
         _isdraggingPhoto = NO;
         
@@ -428,6 +433,17 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
 }
 
 #pragma mark - Genaral
+- (void) showHint:(NSString *)text {
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:window animated:true];
+    [hud setUserInteractionEnabled:NO];
+    hud.mode = MBProgressHUDModeText;
+    hud.label.text = text ? text : @"";
+    hud.margin = 10;
+    hud.offset = CGPointMake(hud.offset.x, window.frame.size.height > 400 ? 180:130);
+    [hud setRemoveFromSuperViewOnHide:YES];
+    [hud hideAnimated:YES afterDelay:1.5];
+}
 
 - (void)prepareForClosePhotoBrowser {
     // Gesture
@@ -726,7 +742,9 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
     }
 }
 
-
+- (void)currentPhotoLongPressed {
+    [self actionButtonPressed:nil];
+}
 
 #pragma mark - Photo Loading Notification
 
@@ -1084,11 +1102,14 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
     }
 }
 - (void)actionButtonPressed:(id)sender {
+    if (_isSheetShow) {
+        return;
+    }
+    _isSheetShow = YES;
     id <SGTPhotoProtocol> photo = [self photoAtIndex:_currentPageIndex];
     
     if ([self numberOfPhotos] > 0 && [photo underlyingImage]) {
-        if(!_actionButtonTitles)
-        {
+        if(!_actionButtonTitles) {
             // Activity view
             NSMutableArray *activityItems = [NSMutableArray arrayWithObject:[photo underlyingImage]];
             if (photo.caption) [activityItems addObject:photo.caption];
@@ -1099,12 +1120,17 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
 #ifdef  __IPHONE_8_0
             [self.activityViewController setCompletionWithItemsHandler:^(NSString *activityType, BOOL completed, NSArray *returnedItems, NSError *activityError) {
                 [selfBlock hideControlsAfterDelay];
+                [selfBlock showHint:@"完成"];
                 selfBlock.activityViewController = nil;
+                selfBlock.isSheetShow = NO;
+                
             }];
 #else
             [self.activityViewController setCompletionHandler:^(NSString *activityType, BOOL completed) {
                 [selfBlock hideControlsAfterDelay];
+                [selfBlock showHint:@"完成"];
                 selfBlock.activityViewController = nil;
+                selfBlock.isSheetShow = NO;
             }];
 #endif
             if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
@@ -1116,9 +1142,7 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
                                          inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny
                                        animated:YES];
             }
-        }
-        else
-        {
+        }else {
             // Action sheet
             self.actionsSheet = [UIActionSheet new];
             self.actionsSheet.delegate = self;
@@ -1145,17 +1169,20 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
 
 - (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex {
     if (actionSheet == _actionsSheet) {
-        self.actionsSheet = nil;
-        
         if (buttonIndex != actionSheet.cancelButtonIndex) {
             if ([_delegate respondsToSelector:@selector(photoBrowser:didDismissActionSheetWithButtonIndex:photoIndex:)]) {
                 [_delegate photoBrowser:self didDismissActionSheetWithButtonIndex:buttonIndex photoIndex:_currentPageIndex];
                 return;
             }
         }
+        self.actionsSheet = nil;
     }
-    
-    [self hideControlsAfterDelay]; // Continue as normal...
+    _isSheetShow = NO;
+//    [self hideControlsAfterDelay]; // Continue as normal...
+}
+
+- (void)actionSheetCancel:(UIActionSheet *)actionSheet {
+    _isSheetShow = NO;
 }
 
 #pragma mark - pop Animation

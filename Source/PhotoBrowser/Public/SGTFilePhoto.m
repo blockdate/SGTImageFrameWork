@@ -7,6 +7,7 @@
 //
 
 #import "SGTFilePhoto.h"
+#import <Photos/Photos.h>
 
 @interface SGTPhoto()
 - (void)imageLoadingComplete;
@@ -25,6 +26,7 @@
     self = [super init];
     if (self) {
         self.filePath = filePath;
+        self.preferFilePath = [filePath stringByDeletingLastPathComponent];
     }
     return self;
 }
@@ -126,6 +128,28 @@
             [self performSelectorOnMainThread:@selector(imageLoadingComplete) withObject:nil waitUntilDone:NO];
         }
     }
+}
+
+- (void)saveToAlbum:(void (^)(BOOL))finish {
+    if ([[NSFileManager defaultManager] fileExistsAtPath:self.filePath]) {
+        
+        NSURL *url = [NSURL URLWithString:self.filePath];
+        
+        [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
+            [PHAssetChangeRequest creationRequestForAssetFromImageAtFileURL:url];
+        } completionHandler:^(BOOL success, NSError * _Nullable error) {
+            NSLog(@"finisj error:%@ success %d",error,success);
+            if (finish) {
+                finish(success);
+            }
+        }];
+    }else {
+        NSLog(@"file not exit at %@", self.filePath);
+    }
+}
+
+- (NSString *)fullLocalFilePath {
+    return self.filePath;
 }
 
 @end

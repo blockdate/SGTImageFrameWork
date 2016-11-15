@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Photos/Photos.h>
+#import <Photos/PhotosTypes.h>
 #import "SGTPhotoPickerControllerDelegate.h"
 
 FOUNDATION_EXTERN NSString * _Nonnull sgtImagePickerStoredGroupKey;

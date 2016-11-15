@@ -8,6 +8,7 @@
 
 #import "SGTAssetPhoto.h"
 #import <Photos/Photos.h>
+#import "NSString+Password.h"
 
 @interface SGTPhoto()
 - (void)imageLoadingStarted;
@@ -35,6 +36,7 @@ static PHImageRequestOptions *requestOptions;
             requestOptions.deliveryMode = PHImageRequestOptionsDeliveryModeOpportunistic;
             requestOptions.resizeMode = PHImageRequestOptionsResizeModeFast;
         }
+        self.preferFilePath = [NSHomeDirectory() stringByAppendingPathComponent:@"sgt_photo"];
     }
     return self;
 }
@@ -88,6 +90,29 @@ static PHImageRequestOptions *requestOptions;
         return [self.imageAssert isEqual:photo];
     }
     return NO;
+}
+
+- (void)saveToDisk:(void (^)(BOOL))finish {
+    if (self.imageAssert) {
+        BOOL isDirectory;
+        if (![[NSFileManager defaultManager] fileExistsAtPath:self.preferFilePath isDirectory:&isDirectory]) {
+            [[NSFileManager defaultManager] createDirectoryAtPath:self.preferFilePath withIntermediateDirectories:YES attributes:nil error:nil];
+        }
+        NSString *fullPath = [self fullLocalFilePath];
+        [[PHImageManager defaultManager] requestImageDataForAsset:self.imageAssert options:nil resultHandler:^(NSData * _Nullable imageData, NSString * _Nullable dataUTI, UIImageOrientation orientation, NSDictionary * _Nullable info) {
+            [imageData writeToFile:fullPath atomically:YES];
+            NSLog(@"save to path %@", fullPath);
+            if (finish) {
+                finish(YES);
+            }
+        }];
+    }
+}
+
+- (NSString *)fullLocalFilePath {
+    NSString *name = [self.imageAssert.localIdentifier md5];
+    NSString *fullPath = [self.preferFilePath stringByAppendingPathComponent:name];
+    return fullPath;
 }
 
 @end

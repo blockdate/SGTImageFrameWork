@@ -19,6 +19,7 @@
 - (void)cancelControlHiding;
 - (void)hideControlsAfterDelay;
 - (void)toggleControls;
+- (void)currentPhotoLongPressed;
 @end
 
 @interface SGTZoomingScrollView ()
@@ -46,6 +47,8 @@
         _photoImageView.delegate = self;
         _photoImageView.backgroundColor = [UIColor clearColor];
         [self addSubview:_photoImageView];
+        UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress)];
+        [_photoImageView addGestureRecognizer:longPress];
         
         CGRect screenBound = [[UIScreen mainScreen] bounds];
         CGFloat screenWidth = screenBound.size.width;
@@ -317,6 +320,10 @@
 }
 - (void)view:(UIView *)view doubleTapDetected:(UITouch *)touch {
     [self handleDoubleTap:[touch locationInView:view]];
+}
+
+- (void)longPress {
+    [_photoBrowser performSelector:@selector(currentPhotoLongPressed) withObject:nil afterDelay:0];
 }
 
 @end

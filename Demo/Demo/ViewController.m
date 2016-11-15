@@ -89,7 +89,8 @@
     [photos addObject:photo];
     SGTPhotoBrowser *browser = [[SGTPhotoBrowser alloc] initWithPhotos:photos];
     browser.forceHideStatusBar = NO;
-    [self presentViewController:browser animated:YES completion:nil];
+    [self.navigationController pushViewController:browser animated:true];
+//    [self presentViewController:browser animated:YES completion:nil];
 }
 - (void)showPhotoBrowserPicker {
     NSMutableArray<SGTPhotoSelectProtocol> *photos = [NSMutableArray<SGTPhotoSelectProtocol> new];

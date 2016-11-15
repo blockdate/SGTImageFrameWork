@@ -119,6 +119,17 @@
     return nil;
 }
 
+- (void)saveToDisk:(void (^)(BOOL))finish{
+    if (finish) {
+        finish(NO);
+    }
+}
+-(void)saveToAlbum:(void (^)(BOOL))finish{
+    if (finish) {
+        finish(NO);
+    }
+}
+
 // Called on main
 - (void)imageLoadingComplete {
     [self imageLoadCompleteWithNoNotify];
@@ -146,5 +157,7 @@
         }
     }
 }
+
+- (NSString *)fullLocalFilePath{return nil;}
 
 @end

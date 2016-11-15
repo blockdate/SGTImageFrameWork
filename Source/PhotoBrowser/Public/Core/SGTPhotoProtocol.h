@@ -23,9 +23,28 @@
 + (NSArray<SGTPhotoProtocol> *_Nonnull)photosWithURLs:(NSArray<NSURL *> *_Nonnull)urlsArray;
 + (NSArray<SGTPhotoProtocol> *_Nonnull)photosWithPhotos:(NSArray<PHAsset *> *_Nonnull)assetArray;
 
+
+/**
+ underlyingImage
+ */
 @property (nonatomic, strong, nullable) UIImage *underlyingImage;
 
+/**
+ prefer image load size ，if not set， the origin size will load
+ */
 @property (nonatomic) CGSize preferSize;
+
+/**
+ the prefer save file path， if not set ，the photo will save to cache path, please set a directory if you want to save the photo custom;
+ */
+@property (nonatomic, nullable) NSString *preferFilePath;
+
+/**
+ the full filepath if the file was save to local or the photo is a local one;
+
+ @return filepath
+ */
+- (NSString * _Nullable) fullLocalFilePath;
 
 - (NSUInteger)size;
 
@@ -74,6 +93,10 @@
  @return placeholderImage while image is loading
  */
 - ( UIImage * _Nullable )placeholderImage;
+
+- (void)saveToAlbum:(void(^_Nullable)(BOOL))finish;
+
+- (void)saveToDisk:(void(^_Nullable)(BOOL))finish;
 
 @end
 

@@ -32,7 +32,7 @@
 @property (nonatomic, nullable, strong) NSDictionary *imageInfo;
 @end
 
-@interface SGTPhotoFlowViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, SGTPhotoAssetViewCellStatuChangeDelegate, SGTSelectedPhotoGalleryViewDelegate, SGTPhotoBrowserPickerDelegate> {
+@interface SGTPhotoFlowViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, SGTPhotoAssetViewCellStatuChangeDelegate, SGTSelectedPhotoGalleryViewDelegate, SGTPhotoBrowserPickerDelegate, SGTPhotoBrowserDelegate> {
     
     PHFetchResult<PHAsset *> *_photoAssetList;
 }
@@ -332,6 +332,7 @@
     SGTPhotoBrowserPicker *browser = [[SGTPhotoBrowserPicker alloc] initWithSelectedPhotos:photos animatedFromView:imageview];
     [browser setInitialPageIndex:index];
     browser.hideBottomBar = YES;
+    browser.delegate = self;
     [self.navigationController presentViewController:browser animated:YES completion:nil];
 }
 
@@ -473,6 +474,15 @@
     }else {
         [self removePhoto:photo];
     }
+}
+
+#pragma mark - SGTPhotoBrowserDelegate
+
+- (void)photoBrowser:(SGTPhotoBrowser *)photoBrowser didDismissActionSheetWithButtonIndex:(NSUInteger)buttonIndex photoIndex:(NSUInteger)photoIndex {
+//    id<SGTPhotoSelectProtocol> photo = self.photoArray[photoIndex];
+//    [photo saveToDisk:^(BOOL finish) {
+//        NSLog(@"save to disk finish :%d", finish);
+//    }];
 }
 
 #pragma mark - Getter
