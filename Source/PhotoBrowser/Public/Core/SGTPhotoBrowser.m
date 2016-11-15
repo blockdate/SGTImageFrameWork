@@ -8,7 +8,7 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import <pop/POP.h>
-#import <Masonry.h>
+#import <Masonry/Masonry.h>
 #import "SGTPhoto.h"
 #import "SGTPhotoBrowser.h"
 #import "SGTPhotoMarco.h"

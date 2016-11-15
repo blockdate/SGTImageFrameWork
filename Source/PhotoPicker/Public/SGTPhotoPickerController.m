@@ -65,19 +65,25 @@ NSString * _Nonnull sgtImagePickerStoredGroupKey = @"sgtImagePickerStoredGroupKe
         {
             [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
                 if(status == PHAuthorizationStatusAuthorized) {
-                    [self authorizadSuccess];
+                    //[self authorizadSuccess];
+                    [self performSelectorOnMainThread:@selector(authorizadSuccess) withObject:nil waitUntilDone:NO];
                 }else {
-                    [self showUnAuthorizaView];
+//                    [self showUnAuthorizaView];
+                    [self performSelectorOnMainThread:@selector(showUnAuthorizaView) withObject:nil waitUntilDone:NO];
                 }
             }];
         }
             break;
         case PHAuthorizationStatusAuthorized:{
-            [self authorizadSuccess];
+//            [self authorizadSuccess];
+            
+            [self performSelectorOnMainThread:@selector(authorizadSuccess) withObject:nil waitUntilDone:NO];
         }
             break;
         default:
-            [self showUnAuthorizaView];
+//            [self showUnAuthorizaView];
+            
+            [self performSelectorOnMainThread:@selector(showUnAuthorizaView) withObject:nil waitUntilDone:NO];
             break;
     }
     

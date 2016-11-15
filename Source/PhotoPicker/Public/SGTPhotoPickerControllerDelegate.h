@@ -12,7 +12,7 @@
 @class SGTPhotoPickerController;
 
 @protocol SGTPhotoPickerControllerDelegate <NSObject>
-
+@optional
 - (void)sgtphotoPickFinishedWithImages:(NSArray<SGTPhotoSelectProtocol>*)photos otherInfo:(NSDictionary *)info;
 - (void)sgtphotoPickCancled:(SGTPhotoPickerController *)controller;
 

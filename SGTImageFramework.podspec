@@ -40,4 +40,5 @@ Pod::Spec.new do |s|
   s.dependency 'SDWebImage'
   s.dependency 'MBProgressHUD'
   s.dependency 'pop'
+  s.dependency 'DACircularProgress'
 end
