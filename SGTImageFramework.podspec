@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SGTImageFramework"
-  s.version      = "0.0.6-debug"
+  s.version      = "0.0.7-debug"
   s.summary      = "This is a private pod sp. provide image picker and viewer function"
 
   s.description  = <<-DESC
