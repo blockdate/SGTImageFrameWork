@@ -114,7 +114,7 @@
 #import "PhotoModel.h"
 #import "PhotoBroswerType.h"
 
-NS_CLASS_DEPRECATED_IOS(4_0, 7_0, "Use SGTPhotoBrowser instead")
+NS_CLASS_DEPRECATED_IOS(4_0, 9_0, "Use SGTPhotoBrowser instead")
 @interface PhotoBroswerVC : UIViewController
 
 +(void)show:(UIViewController *)handleVC isLocal:(BOOL)islocal type:(PhotoBroswerVCType)type index:(NSUInteger)index photoModelBlock:(NSArray *(^)())photoModelBlock;

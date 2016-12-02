@@ -23,7 +23,7 @@
 - (void)photoBrowser:(SGTPhotoPickerBrowser *)photoBrowser seleteFullImage:(BOOL)fullImage;
 @end
 
-NS_CLASS_DEPRECATED_IOS(4_0, 7_0, "Use SGTPhotoBrowserPicker instead")
+NS_CLASS_DEPRECATED_IOS(4_0, 9_0, "Use SGTPhotoBrowserPicker instead")
 @interface SGTPhotoPickerBrowser : UIViewController
 
 @property (nonatomic, weak) id<SGTPhotoPickerBrowserDelegate> delegate;

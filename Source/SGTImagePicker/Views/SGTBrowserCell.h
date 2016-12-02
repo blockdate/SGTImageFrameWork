@@ -10,7 +10,7 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 @class SGTPhotoPickerBrowser,SGTImageAsset;
 
-NS_CLASS_DEPRECATED_IOS(4_0, 7_0, "Use SGTPhotoBrowserPicker instead")
+NS_CLASS_DEPRECATED_IOS(4_0, 9_0, "Use SGTPhotoBrowserPicker instead")
 @interface SGTBrowserCell : UICollectionViewCell
 
 @property (nonatomic, weak) SGTPhotoPickerBrowser *photoBrowser;
