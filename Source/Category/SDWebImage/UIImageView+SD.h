@@ -30,7 +30,7 @@
  *  @param progressBlock  进度
  *  @param completedBlock 完成
  */
--(void)imageWithUrlStr:(NSString *)urlStr phImage:(UIImage *)phImage progressBlock:(SDWebImageDownloaderProgressBlock)progressBlock completedBlock:(SDWebImageCompletionBlock)completedBlock;
+-(void)imageWithUrlStr:(NSString *)urlStr phImage:(UIImage *)phImage progressBlock:(SDWebImageDownloaderProgressBlock)progressBlock completedBlock:(SDExternalCompletionBlock)completedBlock;
 
 
 @end

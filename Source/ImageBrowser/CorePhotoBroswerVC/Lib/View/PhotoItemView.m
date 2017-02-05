@@ -115,16 +115,13 @@
         
         if(image == nil) return;
         
-        [self.photoImageView imageWithUrlStr:_photoModel.image_HD_U phImage:image progressBlock:^(NSInteger receivedSize, NSInteger expectedSize) {
-            
+        [self.photoImageView imageWithUrlStr:_photoModel.image_HD_U phImage:image progressBlock:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
             _progressView.hidden = NO;
             
             CGFloat progress = receivedSize /((CGFloat)expectedSize);
             
             _progressView.progress = progress;
-            
-        } completedBlock:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-            
+        } completedBlock:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
             self.hasImage = image !=nil;
             
             if(image!=nil && _progressView.progress <1.0f) {

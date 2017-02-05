@@ -32,7 +32,7 @@
  *  @param phImage        占位图片
  *  @param completedBlock 完成
  */
--(void)imageWithUrlStr:(NSString *)urlStr phImage:(UIImage *)phImage state:(UIControlState)state completedBlock:(SDWebImageCompletionBlock)completedBlock;
+-(void)imageWithUrlStr:(NSString *)urlStr phImage:(UIImage *)phImage state:(UIControlState)state completedBlock:(SDExternalCompletionBlock)completedBlock;
 
 
 

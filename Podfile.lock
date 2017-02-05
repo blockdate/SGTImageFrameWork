@@ -3,11 +3,11 @@ PODS:
   - Masonry (1.0.2)
   - MBProgressHUD (1.0.0)
   - pop (1.0.9)
-  - ReactiveObjC (1.0.1)
+  - ReactiveObjC (2.1.2)
   - Reveal-iOS-SDK (1.6.2)
-  - SDWebImage (3.8.2):
-    - SDWebImage/Core (= 3.8.2)
-  - SDWebImage/Core (3.8.2)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
 
 DEPENDENCIES:
   - DACircularProgress
@@ -23,10 +23,10 @@ SPEC CHECKSUMS:
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
-  ReactiveObjC: 0e618037d7b883b4cebcc8da203e8ed9b69ca2d3
+  ReactiveObjC: 7b6782ae39f9ac0f57205c3b0c0b69b9dd7048c0
   Reveal-iOS-SDK: e2250b3c155bcfac53ae223ddc1f76d08f206c33
-  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
 
 PODFILE CHECKSUM: ec1313244cdbf25cd066870dd1c683f490ab2dc3
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.1
